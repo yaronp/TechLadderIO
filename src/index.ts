@@ -16,13 +16,18 @@ interface Props {
     notes: string[]
 }
 
+function getUrl() {
+    return "./data/data.en.json";
+}
+
 async function fetchData(): Promise<Props> {
-    const response = await fetch("./data/data.en.json", {
+    const url = getUrl();
+    const response = await fetch(url, {
         method: "GET"
     });
     const data = await response.json();
     return data;
-}
+} 
 
 function renderContent(props: Props) {
     return `
@@ -73,6 +78,34 @@ function renderContent(props: Props) {
                 <div class="note">${n}</div>
             `).join("")
         }
+        <div class="promo">
+            <h1>Would you like to learn more?</h1>
+            <p>
+                Check out my new book <b>Learning TypeScript 2.x</b> (Second edition)
+                to learn everything in the preceding list and more from a single source!
+                Available now at all major retailers!
+            </p>
+            <a href="http://www.learningtypescript.com/">
+                <img src="./assets/book.png"/>
+            </a>
+            <p>
+                Learn more at
+                <a href="http://www.learningtypescript.com/">www.learningtypescript.com</a>
+            </p>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2018 <a href="https://twitter.com/RemoHJansen">Remo H. Jansen</a>.
+            Code licensed under
+            <a
+                href="https://github.com/remojansen/TSPL/blob/master/LICENSE"
+            >the MIT license</a>.
+            <br/>
+            Content licensed under the
+            <a
+                href="https://creativecommons.org/licenses/by/4.0/"
+                title="Creative Commons Attribution 4.0 International license"
+            >the Creative Commons Attribution 4.0 International license<a>.
+        </div>
     `;
 }
 
