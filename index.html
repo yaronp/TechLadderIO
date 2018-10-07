@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>The TypeScript progression ladder (TSPL)</title>
+    <style>
+
+        .loader {
+            margin: 0 0 2em;
+            height: 100px;
+            width: 20%;
+            text-align: center;
+            padding: 1em;
+            margin: 0 auto 1em;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        body {
+            text-align: center;
+            font-family: "Comfortaa", cursive;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .logo {
+            max-width: 10%;
+            margin-bottom: 30px;
+        }
+
+        svg path, svg rect{
+            fill: #0077d2;
+        }
+
+        h1 {
+            color: #0077d2;
+        }
+
+        h4 {
+            color: #333333;
+            max-width: 60%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        table {
+            background-color: #f3f3f3;
+            margin: auto;
+            min-width: 90%;
+        }
+
+        table, tr, td {
+            border: none;
+        }
+
+        .level {
+            background-color: #0077d2;
+            color: #ffffff;
+        }
+
+        .level td {
+            padding: 10px;
+        }
+
+        .topic {
+            background-color: #f3f3f3;
+            color: #333333;
+        }
+
+        .topic td {
+            padding: 10px 5px;
+        }
+
+        .topic td {
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .level-subtitle {
+            font-weight: bold;
+        }
+
+        .level-subtitle td {
+            padding-top: 30px;
+        }
+
+        .cc {
+            width: 50px;
+        }
+
+        .last td {
+            padding-bottom: 30px;
+        }
+
+        .copyright {
+            width: 60%;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .note {
+            width: 60%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .promo {
+            width: 60%;
+            margin: auto;
+            padding-top: 100px;
+        }
+
+        .promo img {
+            max-width: 40%;
+        }
+
+        a {
+            color: #0077d2;
+        }
+
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/remojansen/TSPL">
+        <img
+            style="position: absolute; top: 0; right: 0; border: 0;"
+            src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"
+            alt="Fork me on GitHub"
+        >
+    </a>
+    <div id="main">
+        <div class="loader loader--style3" title="2">
+            <svg
+                version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"
+            >
+                <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                    <animateTransform
+                        attributeType="xml"
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 25 25"
+                        to="360 25 25"
+                        dur="0.6s"
+                        repeatCount="indefinite"
+                    />
+                </path>
+            </svg>
+        </div>
+    </div>
+    <div class="promo">
+        <h1>Want to learn more?</h1>
+        <p>
+            Check out my new book <b>Learning TypeScript 2.x</b> (Second edition)
+            to learn everything in the preceding list and more from a single source!
+            Available now at all major retailers!
+        </p>
+        <a href="http://www.learningtypescript.com/">
+            <img src="http://www.learningtypescript.com/learning-typescript-cover-TRANSPARENT.png"/>
+        </a>
+        <p>
+            Learn more at
+            <a href="http://www.learningtypescript.com/">www.learningtypescript.com</a>
+        </p>
+    </div>
+    <div class="copyright">
+        Copyright &copy; 2018 <a href="https://twitter.com/RemoHJansen">Remo H. Jansen</a>
+        -
+        Code licensed under
+        <a
+            href="https://github.com/remojansen/TSPL/blob/master/LICENSE"
+        >
+            the MIT license
+        </a> &
+        Content licensed under the
+        <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            title="Creative Commons Attribution 4.0 International license"
+        >
+            the Creative Commons Attribution 4.0 International license
+        <a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
