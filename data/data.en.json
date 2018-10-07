@@ -95,12 +95,27 @@
                 {
                     "name": "Classes",
                     "description": "TODO",
-                    "resources": []
+                    "resources": [
+                        "http://www.typescriptlang.org/docs/handbook/classes.html",
+                        "https://basarat.gitbooks.io/typescript/docs/classes.html"
+                    ]
                 },
                 {
-                    "name": "Modules and namespaces",
+                    "name": "Modules",
                     "description": "TODO",
-                    "resources": []
+                    "resources": [
+                        "http://www.typescriptlang.org/docs/handbook/modules.html",
+                        "https://basarat.gitbooks.io/typescript/docs/project/modules.html"
+                    ]
+                },
+                {
+                    "name": "Namespaces",
+                    "description": "TODO",
+                    "resources": [
+                        "http://www.typescriptlang.org/docs/handbook/namespaces.html",
+                        "http://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html",
+                        "https://basarat.gitbooks.io/typescript/docs/project/namespaces.html"
+                    ]
                 },
                 {
                     "name": "Triple-Slash Directives",
@@ -121,6 +136,11 @@
             "topics": [
                 {
                     "name": "Local types",
+                    "description": "TODO",
+                    "resources": []
+                },
+                {
+                    "name": "Ambient declarations",
                     "description": "TODO",
                     "resources": []
                 },
@@ -309,11 +329,6 @@
                     "resources": []
                 },
                 {
-                    "name": "Ambient declarations",
-                    "description": "TODO",
-                    "resources": []
-                },
-                {
                     "name": "Promises",
                     "description": "TODO",
                     "resources": [
@@ -333,22 +348,31 @@
                 {
                     "name": "Decorators",
                     "description": "TODO",
-                    "resources": []
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/decorators.html"
+                    ]
                 },
                 {
                     "name": "Symbols",
                     "description": "TODO",
-                    "resources": []
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/symbols.html"
+                    ]
                 },
                 {
                     "name": "JSX",
                     "description": "TODO",
-                    "resources": []
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/jsx.html"
+                    ]
                 },
                 {
                     "name": "Discriminated unions",
                     "description": "TODO",
-                    "resources": []
+                    "resources": [
+                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions",
+                        "https://basarat.gitbooks.io/typescript/docs/types/discriminated-unions.html"
+                    ]
                 }
             ]
         },

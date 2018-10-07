@@ -40,7 +40,7 @@ function fetchData() {
         var response, data;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("./data/data.json", {
+                case 0: return [4 /*yield*/, fetch("./data/data.en.json", {
                         method: "GET"
                     })];
                 case 1:

@@ -17,7 +17,7 @@ interface Props {
 }
 
 async function fetchData(): Promise<Props> {
-    const response = await fetch("./data/data.json", {
+    const response = await fetch("./data/data.en.json", {
         method: "GET"
     });
     const data = await response.json();
