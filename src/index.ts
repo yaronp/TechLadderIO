@@ -55,6 +55,7 @@ function renderContent(props: Props) {
                                             <a
                                                 href="${r}"
                                                 target="_blank"
+                                                title="${r}"
                                             >
                                                 <i class="material-icons">link</i>
                                             </a>

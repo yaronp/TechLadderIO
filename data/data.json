@@ -54,45 +54,65 @@
                 },
                 {
                     "name": "Enumerations",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
-                    "resources": []
+                    "description": "Avoid magic strings and code duplication",
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/enums.html",
+                        "https://basarat.gitbooks.io/typescript/docs/enums.html",
+                        "https://medium.com/@katbusch/typescript-enums-explained-e5f9a101afc9"
+                    ]
                 },
                 {
                     "name": "Object literals",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
-                    "resources": []
+                    "description": "Declare and work with object instances",
+                    "resources": [
+                        "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics",
+                        "http://trainologic.com/object-literals-in-typescript/",
+                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer"
+                    ]
                 },
                 {
                     "name": "Arrays",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
-                    "resources": []
+                    "description": "Declare and work with arrays",
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/basic-types.html#array"
+                    ]
                 },
                 {
                     "name": "Tuples",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
-                    "resources": []
+                    "description": "Declare and work with tuples",
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple"
+                    ]
                 },
                 {
                     "name": "Interfaces",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
-                    "resources": []
+                    "description": "Declare and work with interfaces",
+                    "resources": [
+                        "https://www.typescriptlang.org/docs/handbook/interfaces.html",
+                        "https://basarat.gitbooks.io/typescript/docs/types/interfaces.html"
+                    ]
                 },
                 {
                     "name": "Classes",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Modules and namespaces",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Triple-Slash Directives",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "Include additional type definition files in the compilation process",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html"
                     ]
+                },
+                {
+                    "name": "String templates & tagged templates",
+                    "description": "TODO",
+                    "resources": []
                 }
             ]
         },
@@ -101,22 +121,22 @@
             "topics": [
                 {
                     "name": "Local types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Scope and hoisting",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Casting",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Function types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
@@ -142,33 +162,33 @@
                 },
                 {
                     "name": "Object destructuring",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Union types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types"
                     ]
                 },
                 {
                     "name": "Intersection types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types"
                     ]
                 },
                 {
                     "name": "Type aliases",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases"
                     ]
                 },
                 {
                     "name": "Literal types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#string-literal-types",
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#numeric-literal-types"
@@ -176,51 +196,51 @@
                 },
                 {
                     "name": "Control-flow analysis",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://blog.mariusschulz.com/2016/09/30/typescript-2-0-control-flow-based-type-analysis"
                     ]
                 },
                 {
                     "name": "Type guards",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "The never type",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://blog.mariusschulz.com/2016/11/18/typescript-2-0-the-never-type"
                     ]
                 },
                 {
                     "name": "The unknown type",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Readonly",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Strict property initialization",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Inheritance",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Mixings",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Abstract classes",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 }
             ]
@@ -230,17 +250,17 @@
             "topics": [
                 {
                     "name": "lib.d.ts",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Index signature",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Weak types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://blog.mariusschulz.com/2017/12/01/typescript-2-4-weak-type-detection",
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#index-types"
@@ -248,54 +268,54 @@
                 },
                 {
                     "name": "Function overloading",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Specialized overload signature",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Closures",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "This",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Generic types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/generics.html"
                     ]
                 },
                 {
                     "name": "Generic defaults",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Generic constraints",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Custom type guards",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Ambient declarations",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Promises",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://basarat.gitbooks.io/typescript/docs/promise.html",
                         "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
@@ -303,7 +323,7 @@
                 },
                 {
                     "name": "Async/await",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://basarat.gitbooks.io/typescript/docs/async-await.html",
                         "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
@@ -312,22 +332,22 @@
                 },
                 {
                     "name": "Decorators",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Symbols",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "JSX",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Discriminated unions",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 }
             ]
@@ -337,28 +357,28 @@
             "topics": [
                 {
                     "name": "The keyof operator",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://blog.mariusschulz.com/2017/01/06/typescript-2-1-keyof-and-lookup-types"
                     ]
                 },
                 {
                     "name": "Lookup types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://blog.mariusschulz.com/2017/01/06/typescript-2-1-keyof-and-lookup-types"
                     ]
                 },
                 {
                     "name": "Polymorphic this type",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://www.typescriptlang.org/docs/handbook/advanced-types.html#polymorphic-this-types"
                     ]
                 },
                 {
                     "name": "Mapped types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://blog.mariusschulz.com/2017/01/20/typescript-2-1-mapped-types",
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types"
@@ -366,38 +386,38 @@
                 },
                 {
                     "name": "Built-in mapped types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Conditional types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#conditional-types"
                     ]
                 },
                 {
                     "name": "Conditional mapped types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Built-in conditional types",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "http://www.typescriptlang.org/docs/handbook/advanced-types.html#predefined-conditional-types"
                     ]
                 },
                 {
                     "name": "The infer keyword",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://dev.to/miracleblue/how-2-typescript-serious-business-with-typescripts-infer-keyword-40i5"
                     ]
                 },
                 {
                     "name": "Generators",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": [
                         "https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html",
                         "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
@@ -407,32 +427,32 @@
                 },
                 {
                     "name": "Asynchronous generators",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Asynchronous iteration (for await … of)",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Delegating to another generator (yield*)",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Type Checking JavaScript Files",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "Function, bind, call and apply",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 },
                 {
                     "name": "The JavaScript event loop",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+                    "description": "TODO",
                     "resources": []
                 }
             ]
@@ -442,8 +462,10 @@
             "topics": [
                 {
                     "name": "Module resolution rules",
-                    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate",
-                    "resources": []
+                    "description": "Understand how TypeScript resolves modules",
+                    "resources": [
+                        "http://www.typescriptlang.org/docs/handbook/module-resolution.html"
+                    ]
                 },
                 {
                     "name": "Implement type definitions",
