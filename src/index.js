@@ -14,8 +14,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -35,14 +35,20 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var _this = this;
+function getUrl() {
+    var lang = getLang();
+    return "./data/data." + lang + ".json";
+}
 function fetchData() {
     return __awaiter(this, void 0, void 0, function () {
-        var response, data;
+        var url, response, data;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("./data/data.en.json", {
-                        method: "GET"
-                    })];
+                case 0:
+                    url = getUrl();
+                    return [4 /*yield*/, fetch(url, {
+                            method: "GET"
+                        })];
                 case 1:
                     response = _a.sent();
                     return [4 /*yield*/, response.json()];
@@ -54,7 +60,7 @@ function fetchData() {
     });
 }
 function renderContent(props) {
-    return "\n        <img class=\"logo\" src=\"./assets/ts.png\" />\n        <h1>" + props.title + "</h1>\n        <h4>" + props.subtitle + "</h4>\n        <table>\n            " + props.levels.map(function (l) { return "\n                    <tr class=\"level\">\n                        <td colspan=\"3\">" + l.name + "</td>\n                    </tr>\n                    <tr class=\"level-subtitle\">\n                        <td>CONCEPTS</td>\n                        <td>SKILLS</td>\n                        <td>RESOURCES</td>\n                    </tr>\n                    " + l.topics.map(function (t, i) { return "\n                            <tr class=\"topic " + (i === l.topics.length - 1 ? "last" : "") + "\">\n                                <td>\n                                    " + t.name + "\n                                </td>\n                                <td>\n                                    " + t.description + "\n                                </td>\n                                <td>\n                                    " + t.resources.map(function (r) { return "\n                                            <a\n                                                href=\"" + r + "\"\n                                                target=\"_blank\"\n                                                title=\"" + r + "\"\n                                            >\n                                                <i class=\"material-icons\">link</i>\n                                            </a>\n                                        "; }).join("") + "\n                                </td>\n                            </tr>\n                        "; }).join("") + "\n                "; }).join("") + "\n        <table>\n        " + props.notes.map(function (n) { return "\n                <div class=\"note\">" + n + "</div>\n            "; }).join("") + "\n        <div class=\"promo\">\n            <h1>Would you like to learn more?</h1>\n            <p>\n                Check out my new book <b>Learning TypeScript 2.x</b> (Second edition)\n                to learn everything in the preceding list and more from a single source!\n                Available now at all major retailers!\n            </p>\n            <a href=\"http://www.learningtypescript.com/\">\n                <img src=\"./assets/book.png\"/>\n            </a>\n            <p>\n                Learn more at\n                <a href=\"http://www.learningtypescript.com/\">www.learningtypescript.com</a>\n            </p>\n        </div>\n        <div class=\"copyright\">\n            Copyright &copy; 2018 <a href=\"https://twitter.com/RemoHJansen\">Remo H. Jansen</a>.\n            Code licensed under\n            <a\n                href=\"https://github.com/remojansen/TSPL/blob/master/LICENSE\"\n            >the MIT license</a>.\n            <br/>\n            Content licensed under the\n            <a\n                href=\"https://creativecommons.org/licenses/by/4.0/\"\n                title=\"Creative Commons Attribution 4.0 International license\"\n            >the Creative Commons Attribution 4.0 International license<a>.\n        </div>\n    ";
+    return "\n        <img class=\"logo\" src=\"./assets/ts.png\" />\n        <h1>" + props.title + "</h1>\n        <h4>" + props.subtitle + "</h4>\n        <table>\n            " + props.levels.map(function (l) { return "\n                    <tr class=\"level\">\n                        <td colspan=\"3\">" + l.name + "</td>\n                    </tr>\n                    <tr class=\"level-subtitle\">\n                        <td>CONCEPTS</td>\n                        <td>SKILLS</td>\n                        <td>RESOURCES</td>\n                    </tr>\n                    " + l.topics.map(function (t, i) { return "\n                            <tr class=\"topic " + (i === l.topics.length - 1 ? "last" : "") + "\">\n                                <td>\n                                    " + t.name + "\n                                </td>\n                                <td>\n                                    " + t.description + "\n                                </td>\n                                <td>\n                                    " + t.resources.map(function (r) { return "\n                                            <a\n                                                href=\"" + r + "\"\n                                                target=\"_blank\"\n                                                title=\"" + r + "\"\n                                            >\n                                                <i class=\"material-icons\">link</i>\n                                            </a>\n                                        "; }).join("") + "\n                                </td>\n                            </tr>\n                        "; }).join("") + "\n                "; }).join("") + "\n        <table>\n        " + props.notes.map(function (n) { return "\n                <div class=\"note\">" + n + "</div>\n            "; }).join("") + "\n        <div class=\"promo\">\n            <h1>" + props.promo.title + "</h1>\n            <p>\n                " + props.promo.p1 + " <b>Learning TypeScript 2.x (2nd edition)</b> " + props.promo.p2 + "\n            </p>\n            <a href=\"http://www.learningtypescript.com/\">\n                <img src=\"./assets/book.png\"/>\n            </a>\n            <p>\n                " + props.promo.p3 + " <a href=\"http://www.learningtypescript.com/\">www.learningtypescript.com</a>\n            </p>\n        </div>\n        <div class=\"copyright\">\n            Copyright &copy; 2018 <a href=\"https://twitter.com/RemoHJansen\">Remo H. Jansen</a>.\n            " + props.copyright.p1 + "\n            <a\n                href=\"https://github.com/remojansen/TSPL/blob/master/LICENSE\"\n            >MIT</a>.\n            <br/>\n            " + props.copyright.p2 + "\n            <a\n                href=\"https://creativecommons.org/licenses/by/4.0/\"\n                title=\"Creative Commons Attribution 4.0 International license\"\n            >Creative Commons Attribution 4.0 International<a>.\n        </div>\n    ";
 }
 function renderError(e) {
     return "" + e;
@@ -63,6 +69,24 @@ function mount(selector, html) {
     var $e = document.querySelector(selector);
     if ($e) {
         $e.innerHTML = html;
+    }
+}
+function getLang() {
+    /*
+        At the moment we only support one language
+        but people can contribute more language by
+        submmiting new data files. Once a new file
+        is created we need to add an entry here.
+    */
+    var supportedLang = ["en"];
+    var defaultLang = supportedLang[0];
+    var raw = navigator.language.split("-");
+    var lang = raw[0];
+    if (supportedLang.indexOf(lang) !== -1) {
+        return lang;
+    }
+    else {
+        return defaultLang;
     }
 }
 (function () { return __awaiter(_this, void 0, void 0, function () {

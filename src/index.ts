@@ -9,15 +9,30 @@ interface Level {
     topics: Topic[];
 }
 
+interface Promo {
+    title: string;
+    p1: string;
+    p2: string;
+    p3: string;
+}
+
+interface Copyright {
+    p1: string;
+    p2: string;
+}
+
 interface Props {
     title: string;
     subtitle: string;
-    levels: Level[],
-    notes: string[]
+    levels: Level[];
+    notes: string[];
+    promo: Promo;
+    copyright: Copyright;
 }
 
 function getUrl() {
-    return "./data/data.en.json";
+    const lang = getLang();
+    return `./data/data.${lang}.json`;
 }
 
 async function fetchData(): Promise<Props> {
@@ -79,32 +94,29 @@ function renderContent(props: Props) {
             `).join("")
         }
         <div class="promo">
-            <h1>Would you like to learn more?</h1>
+            <h1>${props.promo.title}</h1>
             <p>
-                Check out my new book <b>Learning TypeScript 2.x</b> (Second edition)
-                to learn everything in the preceding list and more from a single source!
-                Available now at all major retailers!
+                ${props.promo.p1} <b>Learning TypeScript 2.x (2nd edition)</b> ${props.promo.p2}
             </p>
             <a href="http://www.learningtypescript.com/">
                 <img src="./assets/book.png"/>
             </a>
             <p>
-                Learn more at
-                <a href="http://www.learningtypescript.com/">www.learningtypescript.com</a>
+                ${props.promo.p3} <a href="http://www.learningtypescript.com/">www.learningtypescript.com</a>
             </p>
         </div>
         <div class="copyright">
             Copyright &copy; 2018 <a href="https://twitter.com/RemoHJansen">Remo H. Jansen</a>.
-            Code licensed under
+            ${props.copyright.p1}
             <a
                 href="https://github.com/remojansen/TSPL/blob/master/LICENSE"
-            >the MIT license</a>.
+            >MIT</a>.
             <br/>
-            Content licensed under the
+            ${props.copyright.p2}
             <a
                 href="https://creativecommons.org/licenses/by/4.0/"
                 title="Creative Commons Attribution 4.0 International license"
-            >the Creative Commons Attribution 4.0 International license<a>.
+            >Creative Commons Attribution 4.0 International<a>.
         </div>
     `;
 }
@@ -117,6 +129,24 @@ function mount(selector: string, html: string) {
     const $e = document.querySelector(selector);
     if ($e) {
         $e.innerHTML = html;
+    }
+}
+
+function getLang() {
+    /*
+        At the moment we only support one language
+        but people can contribute more language by
+        submmiting new data files. Once a new file
+        is created we need to add an entry here. 
+    */
+    const supportedLang = [ "en" ];
+    const defaultLang = supportedLang[0];
+    const raw = navigator.language.split("-");
+    const lang = raw[0];
+    if (supportedLang.indexOf(lang) !== -1) {
+        return lang;
+    } else {
+        return defaultLang;
     }
 }
 
