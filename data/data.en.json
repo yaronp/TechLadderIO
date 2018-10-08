@@ -534,6 +534,7 @@
         }
     ],
     "notes": [
-        "Please note: some of the preceding topics such as promises are not only relevant to TypeScript (as they are also relevant to JavaScript). These topics have been included because we asume that a novice reader has no previous experince with both JavaScript and TypeScript"
+        "Please note: some of the preceding topics such as promises are not only relevant to TypeScript (as they are also relevant to JavaScript). These topics have been included because we asume that a novice reader has no previous experince with both JavaScript and TypeScript",
+        "This is a community-driven document, please share your feedback, help us to improve it. Please open an issue or send us a PR on Github!"
     ]
 }
