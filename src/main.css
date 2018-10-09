@@ -41,11 +41,12 @@ h4 {
 table {
     background-color: #f3f3f3;
     margin: auto;
-    min-width: 90%;
+    max-width: 80%;
 }
 
 table, tr, td {
     border: none;
+    padding: 15px;
 }
 
 .level {
