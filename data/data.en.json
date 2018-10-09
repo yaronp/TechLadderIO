@@ -288,7 +288,7 @@
                     ]
                 },
                 {
-                    "name": "Mixings",
+                    "name": "Mixins",
                     "description": "Take advantage situations in which multiple inheritance is safe",
                     "resources": [
                         "https://www.typescriptlang.org/docs/handbook/mixins.html",
