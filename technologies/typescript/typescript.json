@@ -1,6 +1,7 @@
 {
-    "title": "TypeScript Progression Ladder",
-    "subtitle": "The TypeScript progression ladder (TSPL) is a grouping of concepts and skills relevant to TypeScript programming. TSPL provides aspiring TypeScript programmers with a way to track and improve their TypeScript skills.",
+    "theme": {
+        "primaryColor": "#0077d2"
+    },
     "levels": [
         {
             "name": "NOVICE",
@@ -611,14 +612,10 @@
         "Please note: some of the preceding topics such as promises are not only relevant to TypeScript (as they are also relevant to JavaScript). These topics have been included because we assume that a novice reader has no previous experience with both JavaScript and TypeScript",
         "This is a community-driven document, please share your feedback, help us to improve it. Please open an issue or send us a PR on Github!"
     ],
-    "promo": {
-        "title": "Would you like to learn more?",
-        "p1": "Check out my new book",
-        "p2": "to learn everything in the preceding list and more from a single source! Available now at all major retailers!",
-        "p3": "Learn more at"
-    },
-    "copyright": {
-        "p1": "Code licensed under",
-        "p2": "Content licensed under"
-    }
+    "contributors": [
+        {
+            "name": "Remo H. Jansen",
+            "contact": "https://twitter.com/RemoHJansen"
+        }
+    ]
 }

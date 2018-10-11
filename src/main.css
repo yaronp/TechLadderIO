@@ -9,6 +9,10 @@
     vertical-align: top;
 }
 
+svg path, svg rect{
+    fill: #f3f3f3;
+}
+
 body {
     background-color: #333333;
     color: #ffffff;
@@ -19,16 +23,9 @@ body {
 }
 
 .logo {
-    max-width: 10%;
+    max-height: 150px;
+    max-width: 50%;
     margin-bottom: 30px;
-}
-
-svg path, svg rect{
-    fill: #0077d2;
-}
-
-h1 {
-    color: #0077d2;
 }
 
 h4 {
@@ -47,11 +44,6 @@ table {
 table, tr, td {
     border: none;
     padding: 15px;
-}
-
-.level {
-    background-color: #0077d2;
-    color: #ffffff;
 }
 
 .level td {
@@ -113,10 +105,6 @@ table, tr, td {
 .promo h1 {
     font-size: 30px;
 } 
-
-a {
-    color: #0077d2;
-}
 
 a:hover {
     text-decoration: none;

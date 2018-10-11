@@ -9,46 +9,108 @@ interface Level {
     topics: Topic[];
 }
 
-interface Promo {
-    title: string;
-    p1: string;
-    p2: string;
-    p3: string;
-}
-
-interface Copyright {
-    p1: string;
-    p2: string;
+interface Contributor {
+    name: string;
+    contact: string;
 }
 
 interface Props {
-    title: string;
-    subtitle: string;
+    theme: Theme,
     levels: Level[];
     notes: string[];
-    promo: Promo;
-    copyright: Copyright;
+    contributors: Contributor[];
 }
 
-function getUrl() {
-    const lang = getLang();
-    return `./data/data.${lang}.json`;
+interface Params {
+    [key: string]: string;
 }
 
-async function fetchData(): Promise<Props> {
-    const url = getUrl();
+interface Theme {
+    primaryColor: string;
+}
+
+interface Technology {
+    id: string;
+    displayName: string;
+    description: string;
+}
+
+function getParams(): Params {
+    const search = window.location.search;
+    if (search) {
+        const paramsStr = search.split("?")[1];
+        if (paramsStr) {
+            const rawParams = paramsStr.split("&");
+            const params: Params = rawParams.reduce((prev, curr) => {
+                const raw = curr.split("=");
+                return {
+                    ...prev,
+                    ...{
+                        [raw[0]]: raw[1]
+                    }
+                }
+            }, {});
+            return params;
+        }
+    }
+    return {};
+}
+
+function getTech(): string | undefined {
+    const params = getParams();
+    const tech = params["tech"];
+    return tech;
+}
+
+function getUrl(tech: string) {
+    if (tech !== undefined) {
+        return `./technologies/${tech}/${tech}.json`;
+    }
+    return "./technologies/technologies.json";
+}
+
+async function fetchTechnologies(): Promise<Technology[]> {
+    const url = "./technologies/technologies.json";
     const response = await fetch(url, {
         method: "GET"
     });
     const data = await response.json();
     return data;
-} 
+}
 
-function renderContent(props: Props) {
+async function fetchData(tech: string): Promise<Props> {
+    const url = getUrl(tech);
+    const response = await fetch(url, {
+        method: "GET"
+    });
+    const data = await response.json();
+    return data;
+}
+
+function renderContent(props: Props, tech: Technology) {
     return `
-        <img class="logo" src="./assets/ts.png" />
-        <h1>${props.title}</h1>
-        <h4>${props.subtitle}</h4>
+        <style>
+            h1 {
+                color: ${props.theme.primaryColor};
+            }
+
+            a {
+                color: ${props.theme.primaryColor};
+            }
+
+            .level {
+                background-color: ${props.theme.primaryColor};
+                color: #ffffff;
+            }
+        </style>
+        <img class="logo" src="./technologies/${tech.id}/${tech.id}.png" />
+        <h1>
+            ${tech.displayName} Progression Ladder
+        </h1>
+        <h4>
+            The ${tech.displayName} progression ladder is a grouping of concepts and skills relevant to ${tech.displayName} programming.
+            It provides aspiring TypeScript programmers with a way to track and improve their ${tech.displayName} skills.
+        </h4>
         <table>
             ${
                 props.levels.map(l => `
@@ -93,30 +155,87 @@ function renderContent(props: Props) {
                 <div class="note">${n}</div>
             `).join("")
         }
-        <div class="promo">
-            <h1>${props.promo.title}</h1>
-            <p>
-                ${props.promo.p1} <b>Learning TypeScript 2.x (2nd edition)</b> ${props.promo.p2}
-            </p>
-            <a href="http://www.learningtypescript.com/">
-                <img src="./assets/book.png"/>
-            </a>
-            <p>
-                ${props.promo.p3} <a href="http://www.learningtypescript.com/">www.learningtypescript.com</a>
-            </p>
-        </div>
         <div class="copyright">
-            Copyright &copy; 2018 <a href="https://twitter.com/RemoHJansen">Remo H. Jansen</a>.
-            ${props.copyright.p1}
-            <a
-                href="https://github.com/remojansen/TSPL/blob/master/LICENSE"
-            >MIT</a>.
-            <br/>
-            ${props.copyright.p2}
+            This guide was created by
+            ${props.contributors.map((contributor, index) => {
+                if (props.contributors.length === 1 || index === 0) {
+                    return `
+                        <a href="${contributor.contact}">
+                            ${contributor.name}
+                        </a>
+                    `;
+                } else if (index > 0 && index < props.contributors.length -1) {
+                    return `, <a href="${contributor.contact}">${contributor.name}</a>`;
+                } else {
+                    return `and <a href="${contributor.contact}">${contributor.name}</a>`;
+                }
+            }).join("")}
+            and it is licensed under
             <a
                 href="https://creativecommons.org/licenses/by/4.0/"
                 title="Creative Commons Attribution 4.0 International license"
             >Creative Commons Attribution 4.0 International<a>.
+        </div>
+    `;
+}
+
+function renderHome(technologies: Technology[]) {
+    technologies = technologies.sort((a, b) => a.displayName.localeCompare(b.displayName));
+    return `
+        <style>
+            h1 {
+                color: #f7a80d;
+            }
+
+            a {
+                color: #f7a80d;
+            }
+
+            .level {
+                background-color: #f7a80d;
+                color: #ffffff;
+            }
+        </style>
+        <img class="logo" src="./assets/logo.png" />
+        <h1>Tech Ladder IO</h1>
+        <h4>
+            A community-driven grouping of concepts and skills relevant to different technologies
+            that provides aspiring programmers with a way to track and improve their skills.
+        </h4>
+        <table>
+            <tr class="level">
+                <td>Technology</td>
+                <td>Description</td>
+                <td>Ladder</td>
+            </tr>
+            ${technologies.map(t => {
+                return `
+                    <tr class="topic">
+                        <td>
+                            <a href="/?tech=${t.id}">
+                                <b>
+                                    ${t.displayName}
+                                </b>
+                            </a>
+                        </td>
+                        <td>
+                            ${t.description}
+                        </td>
+                        <td>
+                            <a href="/?tech=${t.id}">
+                                <i class="material-icons">link</i>
+                            </a>
+                        </td>
+                    </tr>
+                `;
+            }).join("")}
+        <table>
+        <div class="promo">
+            <h1>We need your help!</h1>
+            <p>
+                This is a community-driven project, please share your feedback and
+                help us to improve it. Please open an issue or send us a PR on Github!
+            </p>
         </div>
     `;
 }
@@ -132,30 +251,27 @@ function mount(selector: string, html: string) {
     }
 }
 
-function getLang() {
-    /*
-        At the moment we only support one language
-        but people can contribute more language by
-        submmiting new data files. Once a new file
-        is created we need to add an entry here. 
-    */
-    const supportedLang = [ "en" ];
-    const defaultLang = supportedLang[0];
-    const raw = navigator.language.split("-");
-    const lang = raw[0];
-    if (supportedLang.indexOf(lang) !== -1) {
-        return lang;
-    } else {
-        return defaultLang;
-    }
-}
-
 (async () => {
     const root = "#main";
     try {
-        const data = await fetchData();
-        const html = renderContent(data);
+        const techId = getTech();
+        const technologies = await fetchTechnologies();
+        let html = "";
+
+        if (techId === undefined) {
+            html = renderHome(technologies);
+        } else if (technologies.find(t => t.id === techId) === undefined) {
+            html = `
+                Sorry page not found!
+            `;
+        } else {
+            const data = await fetchData(techId!);
+            const tech = technologies.find(t => t.id === techId);
+            html = renderContent(data, tech!);
+        }
+        
         mount(root, html);
+
     } catch(e) {
         const html = renderError(e.message);
         mount(root, html);
