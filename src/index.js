@@ -1,14 +1,11 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -25,8 +22,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -129,7 +126,8 @@ function renderContent(props, tech) {
     }).join("") + "\n            and it is licensed under\n            <a\n                href=\"https://creativecommons.org/licenses/by/4.0/\"\n                title=\"Creative Commons Attribution 4.0 International license\"\n            >Creative Commons Attribution 4.0 International<a>.\n        </div>\n    ";
 }
 function renderHome(technologies) {
-    technologies = technologies.sort(function (a, b) { return a.displayName.localeCompare(b.displayName); });
+    technologies = technologies.sort(function (a, b) { return a.displayName.localeCompare(b.displayName); })
+        .filter(function (t) { return t.isVisible; });
     return "\n        <style>\n            h1 {\n                color: #f7a80d;\n            }\n\n            a {\n                color: #f7a80d;\n            }\n\n            .level {\n                background-color: #f7a80d;\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./assets/logo.png\" />\n        <h1>Tech Ladder IO</h1>\n        <h4>\n            A community-driven grouping of concepts and skills relevant to different technologies\n            that provides aspiring programmers with a way to track and improve their skills.\n        </h4>\n        <table>\n            <tr class=\"level\">\n                <td>Technology</td>\n                <td>Description</td>\n                <td>Ladder</td>\n            </tr>\n            " + technologies.map(function (t) {
         return "\n                    <tr class=\"topic\">\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                <b>\n                                    " + t.displayName + "\n                                </b>\n                            </a>\n                        </td>\n                        <td>\n                            " + t.description + "\n                        </td>\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                <i class=\"material-icons\">link</i>\n                            </a>\n                        </td>\n                    </tr>\n                ";
     }).join("") + "\n        <table>\n        <div class=\"promo\">\n            <h1>We need your help!</h1>\n            <p>\n                This is a community-driven project, please share your feedback and\n                help us to improve it.<br>\n                Please open an issue or send us a PR on <a href=\"https://github.com/remojansen/TechLadderIO\">GitHub</a>!\n            </p>\n        </div>\n    ";
