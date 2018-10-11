@@ -14,12 +14,12 @@ However, one of the most recurrent initial pieces of feedback was that people wo
 
 We need your help! There are many ways to help:
 
-- Request a new progression ladders
-- Provide us with feedback about the existing ladders
+- Request a new progression ladder
+- Provide us with feedback about the existing progression ladders
 - Fix spelling errors
 - Add new resources to an existing tipic
-- Add new topics to an existing ladder
-- Create a new ladder
+- Add new topics to an existing progression ladder
+- Create a new progression ladder
 
 If you want to lear how to contribute, please refer to the [`CONTRIBUTING.md`](./CONTRIBUTING.md) file.
 
