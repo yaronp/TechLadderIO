@@ -36,4 +36,4 @@ npm install -g http-server
 http-server
 ```
 
-The new ladders should be available under `http://localhost:8080/?tech=azure`.
+The new ladders should be available under the `http://localhost:8080/?tech=azure` url.
