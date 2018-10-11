@@ -234,7 +234,8 @@ function renderHome(technologies: Technology[]) {
             <h1>We need your help!</h1>
             <p>
                 This is a community-driven project, please share your feedback and
-                help us to improve it. Please open an issue or send us a PR on Github!
+                help us to improve it.<br>
+                Please open an issue or send us a PR on <a href="https://github.com/remojansen/TechLadderIO">GitHub</a>!
             </p>
         </div>
     `;
