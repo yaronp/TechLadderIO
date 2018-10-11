@@ -1,0 +1,81 @@
+{
+    "theme": {
+        "primaryColor": "#ec2025"
+    },
+    "levels": [
+        {
+            "name": "NOVICE",
+            "topics": [
+                {
+                    "name": "Lorem ipsum",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "resources": [
+                        "https://www.example.com",
+                        "https://www.example.com"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ADVANCED BEGINNER",
+            "topics": [
+                {
+                    "name": "Lorem ipsum",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "resources": [
+                        "https://www.example.com",
+                        "https://www.example.com"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "COMPETENT",
+            "topics": [
+                {
+                    "name": "Lorem ipsum",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "resources": [
+                        "https://www.example.com",
+                        "https://www.example.com"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PROFICIENT",
+            "topics": [
+                {
+                    "name": "Lorem ipsum",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "resources": [
+                        "https://www.example.com",
+                        "https://www.example.com"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "EXPERT",
+            "topics": [
+                {
+                    "name": "Lorem ipsum",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "resources": [
+                        "https://www.example.com",
+                        "https://www.example.com"
+                    ]
+                }
+            ]
+        }
+    ],
+    "notes": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "contributors": [
+        {
+            "name": "Fernando Garcia",
+            "contact": "https://twitter.com/mortificador"
+        }
+    ]
+}
