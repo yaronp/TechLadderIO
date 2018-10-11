@@ -128,6 +128,11 @@ function renderContent(props, tech) {
         }
     }).join("") + "\n            and it is licensed under\n            <a\n                href=\"https://creativecommons.org/licenses/by/4.0/\"\n                title=\"Creative Commons Attribution 4.0 International license\"\n            >Creative Commons Attribution 4.0 International<a>.\n        </div>\n    ";
 }
+function renderHome(technologies) {
+    return "\n        <style>\n            h1 {\n                color: #f7a80d;\n            }\n\n            a {\n                color: #f7a80d;\n            }\n\n            .level {\n                background-color: #f7a80d;\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./assets/logo.png\" />\n        <h1>Tech Ladder IO</h1>\n        <h4>\n            A community-driven grouping of concepts and skills relevant to different technologies\n            that provides aspiring programmers with a way to track and improve their skills.\n        </h4>\n        <table>\n            <tr class=\"level\">\n                <td>Technology</td>\n                <td>Description</td>\n                <td>Ladder</td>\n            </tr>\n            " + technologies.map(function (t) {
+        return "\n                    <tr class=\"topic\">\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                " + t.displayName + "\n                            </a>\n                        </td>\n                        <td>\n                            " + t.description + "\n                        </td>\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                <i class=\"material-icons\">link</i>\n                            </a>\n                        </td>\n                    </tr>\n                ";
+    }).join("") + "\n        <table>\n        <div class=\"promo\">\n            <h1>We need yout help!</h1>\n            <p>\n                This is a community-driven project, please share your feedback and\n                help us to improve it. Please open an issue or send us a PR on Github!\n            </p>\n        </div>\n    ";
+}
 function renderError(e) {
     return "" + e;
 }
@@ -136,11 +141,6 @@ function mount(selector, html) {
     if ($e) {
         $e.innerHTML = html;
     }
-}
-function renderHome(technologies) {
-    return "\n        <style>\n            h1 {\n                color: #f7a80d;\n            }\n\n            a {\n                color: #f7a80d;\n            }\n\n            .level {\n                background-color: #f7a80d;\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./assets/logo.png\" />\n        <h1>Tech Ladder IO</h1>\n        <h4>\n            A community-driven grouping of concepts and skills relevant to different technologies\n            that provides aspiring programmers with a way to track and improve their skills.\n        </h4>\n        <table>\n            <tr class=\"level\">\n                <td>Technology</td>\n                <td>Description</td>\n                <td>Ladder</td>\n            </tr>\n            " + technologies.map(function (t) {
-        return "\n                    <tr class=\"topic\">\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                " + t.displayName + "\n                            </a>\n                        </td>\n                        <td>\n                            " + t.description + "\n                        </td>\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                <i class=\"material-icons\">link</i>\n                            </a>\n                        </td>\n                    </tr>\n                ";
-    }).join("") + "\n        <table>\n        <div class=\"promo\">\n            <h1>We need yout help!</h1>\n        </div>\n    ";
 }
 (function () { return __awaiter(_this, void 0, void 0, function () {
     var root, techId_1, technologies, html, data, tech, e_1, html;

@@ -179,17 +179,6 @@ function renderContent(props: Props, tech: Technology) {
     `;
 }
 
-function renderError(e: string) {
-    return `${e}`;
-}
-
-function mount(selector: string, html: string) {
-    const $e = document.querySelector(selector);
-    if ($e) {
-        $e.innerHTML = html;
-    }
-}
-
 function renderHome(technologies: Technology[]) {
     return `
         <style>
@@ -240,8 +229,23 @@ function renderHome(technologies: Technology[]) {
         <table>
         <div class="promo">
             <h1>We need yout help!</h1>
+            <p>
+                This is a community-driven project, please share your feedback and
+                help us to improve it. Please open an issue or send us a PR on Github!
+            </p>
         </div>
     `;
+}
+
+function renderError(e: string) {
+    return `${e}`;
+}
+
+function mount(selector: string, html: string) {
+    const $e = document.querySelector(selector);
+    if ($e) {
+        $e.innerHTML = html;
+    }
 }
 
 (async () => {
