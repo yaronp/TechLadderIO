@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -14,8 +25,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -35,17 +46,42 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var _this = this;
-function getUrl() {
-    var lang = getLang();
-    return "./data/data." + lang + ".json";
+function getParams() {
+    var search = window.location.search;
+    if (search) {
+        var paramsStr = search.split("?")[1];
+        if (paramsStr) {
+            var rawParams = paramsStr.split("&");
+            var params = rawParams.reduce(function (prev, curr) {
+                var _a;
+                var raw = curr.split("=");
+                return __assign({}, prev, (_a = {},
+                    _a[raw[0]] = raw[1],
+                    _a));
+            }, {});
+            return params;
+        }
+    }
+    return {};
 }
-function fetchData() {
+function getTech() {
+    var params = getParams();
+    var tech = params["tech"];
+    return tech;
+}
+function getUrl(tech) {
+    if (tech !== undefined) {
+        return "./technologies/" + tech + "/" + tech + ".json";
+    }
+    return "./technologies/technologies.json";
+}
+function fetchTechnologies() {
     return __awaiter(this, void 0, void 0, function () {
         var url, response, data;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    url = getUrl();
+                    url = "./technologies/technologies.json";
                     return [4 /*yield*/, fetch(url, {
                             method: "GET"
                         })];
@@ -59,8 +95,38 @@ function fetchData() {
         });
     });
 }
-function renderContent(props) {
-    return "\n        <img class=\"logo\" src=\"./assets/ts.png\" />\n        <h1>" + props.title + "</h1>\n        <h4>" + props.subtitle + "</h4>\n        <table>\n            " + props.levels.map(function (l) { return "\n                    <tr class=\"level\">\n                        <td colspan=\"3\">" + l.name + "</td>\n                    </tr>\n                    <tr class=\"level-subtitle\">\n                        <td>CONCEPTS</td>\n                        <td>SKILLS</td>\n                        <td>RESOURCES</td>\n                    </tr>\n                    " + l.topics.map(function (t, i) { return "\n                            <tr class=\"topic " + (i === l.topics.length - 1 ? "last" : "") + "\">\n                                <td>\n                                    " + t.name + "\n                                </td>\n                                <td>\n                                    " + t.description + "\n                                </td>\n                                <td>\n                                    " + t.resources.map(function (r) { return "\n                                            <a\n                                                href=\"" + r + "\"\n                                                target=\"_blank\"\n                                                title=\"" + r + "\"\n                                            >\n                                                <i class=\"material-icons\">link</i>\n                                            </a>\n                                        "; }).join("") + "\n                                </td>\n                            </tr>\n                        "; }).join("") + "\n                "; }).join("") + "\n        <table>\n        " + props.notes.map(function (n) { return "\n                <div class=\"note\">" + n + "</div>\n            "; }).join("") + "\n        <div class=\"promo\">\n            <h1>" + props.promo.title + "</h1>\n            <p>\n                " + props.promo.p1 + " <b>Learning TypeScript 2.x (2nd edition)</b> " + props.promo.p2 + "\n            </p>\n            <a href=\"http://www.learningtypescript.com/\">\n                <img src=\"./assets/book.png\"/>\n            </a>\n            <p>\n                " + props.promo.p3 + " <a href=\"http://www.learningtypescript.com/\">www.learningtypescript.com</a>\n            </p>\n        </div>\n        <div class=\"copyright\">\n            Copyright &copy; 2018 <a href=\"https://twitter.com/RemoHJansen\">Remo H. Jansen</a>.\n            " + props.copyright.p1 + "\n            <a\n                href=\"https://github.com/remojansen/TSPL/blob/master/LICENSE\"\n            >MIT</a>.\n            <br/>\n            " + props.copyright.p2 + "\n            <a\n                href=\"https://creativecommons.org/licenses/by/4.0/\"\n                title=\"Creative Commons Attribution 4.0 International license\"\n            >Creative Commons Attribution 4.0 International<a>.\n        </div>\n    ";
+function fetchData(tech) {
+    return __awaiter(this, void 0, void 0, function () {
+        var url, response, data;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    url = getUrl(tech);
+                    return [4 /*yield*/, fetch(url, {
+                            method: "GET"
+                        })];
+                case 1:
+                    response = _a.sent();
+                    return [4 /*yield*/, response.json()];
+                case 2:
+                    data = _a.sent();
+                    return [2 /*return*/, data];
+            }
+        });
+    });
+}
+function renderContent(props, tech) {
+    return "\n        <style>\n            h1 {\n                color: " + props.theme.primaryColor + ";\n            }\n\n            a {\n                color: " + props.theme.primaryColor + ";\n            }\n\n            .level {\n                background-color: " + props.theme.primaryColor + ";\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./technologies/" + tech.id + "/" + tech.id + ".png\" />\n        <h1>\n            " + tech.displayName + " Progression Ladder\n        </h1>\n        <h4>\n            The " + tech.displayName + " progression ladder is a grouping of concepts and skills relevant to " + tech.displayName + " programming.\n            It provides aspiring TypeScript programmers with a way to track and improve their " + tech.displayName + " skills.\n        </h4>\n        <table>\n            " + props.levels.map(function (l) { return "\n                    <tr class=\"level\">\n                        <td colspan=\"3\">" + l.name + "</td>\n                    </tr>\n                    <tr class=\"level-subtitle\">\n                        <td>CONCEPTS</td>\n                        <td>SKILLS</td>\n                        <td>RESOURCES</td>\n                    </tr>\n                    " + l.topics.map(function (t, i) { return "\n                            <tr class=\"topic " + (i === l.topics.length - 1 ? "last" : "") + "\">\n                                <td>\n                                    " + t.name + "\n                                </td>\n                                <td>\n                                    " + t.description + "\n                                </td>\n                                <td>\n                                    " + t.resources.map(function (r) { return "\n                                            <a\n                                                href=\"" + r + "\"\n                                                target=\"_blank\"\n                                                title=\"" + r + "\"\n                                            >\n                                                <i class=\"material-icons\">link</i>\n                                            </a>\n                                        "; }).join("") + "\n                                </td>\n                            </tr>\n                        "; }).join("") + "\n                "; }).join("") + "\n        <table>\n        " + props.notes.map(function (n) { return "\n                <div class=\"note\">" + n + "</div>\n            "; }).join("") + "\n        <div class=\"copyright\">\n            This guide was created by\n            " + props.contributors.map(function (contributor, index) {
+        if (props.contributors.length === 1 || index === 0) {
+            return "\n                        <a href=\"" + contributor.contact + "\">\n                            " + contributor.name + "\n                        </a>\n                    ";
+        }
+        else if (index > 0 && index < props.contributors.length - 1) {
+            return ", <a href=\"" + contributor.contact + "\">" + contributor.name + "</a>";
+        }
+        else {
+            return "and <a href=\"" + contributor.contact + "\">" + contributor.name + "</a>";
+        }
+    }).join("") + "\n            and it is licensed under\n            <a\n                href=\"https://creativecommons.org/licenses/by/4.0/\"\n                title=\"Creative Commons Attribution 4.0 International license\"\n            >Creative Commons Attribution 4.0 International<a>.\n        </div>\n    ";
 }
 function renderError(e) {
     return "" + e;
@@ -71,45 +137,47 @@ function mount(selector, html) {
         $e.innerHTML = html;
     }
 }
-function getLang() {
-    /*
-        At the moment we only support one language
-        but people can contribute more language by
-        submmiting new data files. Once a new file
-        is created we need to add an entry here.
-    */
-    var supportedLang = ["en"];
-    var defaultLang = supportedLang[0];
-    var raw = navigator.language.split("-");
-    var lang = raw[0];
-    if (supportedLang.indexOf(lang) !== -1) {
-        return lang;
-    }
-    else {
-        return defaultLang;
-    }
+function renderHome(technologies) {
+    return "\n        <style>\n            h1 {\n                color: #f7a80d;\n            }\n\n            a {\n                color: #f7a80d;\n            }\n\n            .level {\n                background-color: #f7a80d;\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./assets/logo.png\" />\n        <h1>Tech Ladder IO</h1>\n        <h4>\n            A community-driven grouping of concepts and skills relevant to different technologies\n            that provides aspiring programmers with a way to track and improve their skills.\n        </h4>\n        <table>\n            <tr class=\"level\">\n                <td>Technology</td>\n                <td>Description</td>\n                <td>Ladder</td>\n            </tr>\n            " + technologies.map(function (t) {
+        return "\n                    <tr class=\"topic\">\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                " + t.displayName + "\n                            </a>\n                        </td>\n                        <td>\n                            " + t.description + "\n                        </td>\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                <i class=\"material-icons\">link</i>\n                            </a>\n                        </td>\n                    </tr>\n                ";
+    }).join("") + "\n        <table>\n        <div class=\"promo\">\n            <h1>We need yout help!</h1>\n        </div>\n    ";
 }
 (function () { return __awaiter(_this, void 0, void 0, function () {
-    var root, data, html, e_1, html;
+    var root, techId_1, technologies, html, data, tech, e_1, html;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 root = "#main";
                 _a.label = 1;
             case 1:
-                _a.trys.push([1, 3, , 4]);
-                return [4 /*yield*/, fetchData()];
+                _a.trys.push([1, 7, , 8]);
+                techId_1 = getTech();
+                return [4 /*yield*/, fetchTechnologies()];
             case 2:
-                data = _a.sent();
-                html = renderContent(data);
-                mount(root, html);
-                return [3 /*break*/, 4];
+                technologies = _a.sent();
+                html = "";
+                if (!(techId_1 === undefined)) return [3 /*break*/, 3];
+                html = renderHome(technologies);
+                return [3 /*break*/, 6];
             case 3:
+                if (!(technologies.find(function (t) { return t.id === techId_1; }) === undefined)) return [3 /*break*/, 4];
+                html = "\n                Sorry page not found!\n            ";
+                return [3 /*break*/, 6];
+            case 4: return [4 /*yield*/, fetchData(techId_1)];
+            case 5:
+                data = _a.sent();
+                tech = technologies.find(function (t) { return t.id === techId_1; });
+                html = renderContent(data, tech);
+                _a.label = 6;
+            case 6:
+                mount(root, html);
+                return [3 /*break*/, 8];
+            case 7:
                 e_1 = _a.sent();
                 html = renderError(e_1.message);
                 mount(root, html);
-                return [3 /*break*/, 4];
-            case 4: return [2 /*return*/];
+                return [3 /*break*/, 8];
+            case 8: return [2 /*return*/];
         }
     });
 }); })();

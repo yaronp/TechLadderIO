@@ -1,0 +1,32 @@
+[
+    {
+        "id": "typescript",
+        "displayName": "TypeScript",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": "nodejs",
+        "displayName": "Node.js",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": "csharp",
+        "displayName": "C#",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": "azure",
+        "displayName": "Azure",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": "aws",
+        "displayName": "AWS",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": "kubernetes",
+        "displayName": "Kubernetes",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    }
+]
