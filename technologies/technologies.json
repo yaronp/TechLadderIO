@@ -2,31 +2,31 @@
     {
         "id": "typescript",
         "displayName": "TypeScript",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+        "description": "TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language."
     },
     {
         "id": "nodejs",
         "displayName": "Node.js",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+        "description": "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser."
     },
     {
         "id": "csharp",
         "displayName": "C#",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+        "description": "C# is a general-purpose, multi-paradigm programming language encompassing strong typing, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines."
     },
     {
         "id": "azure",
         "displayName": "Azure",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+        "description": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through a global network of Microsoft-managed data centers."
     },
     {
         "id": "aws",
         "displayName": "AWS",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+        "description": "Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis. The technology allows subscribers to have at their disposal a virtual cluster of computers, available all the time, through the Internet."
     },
     {
         "id": "kubernetes",
         "displayName": "Kubernetes",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+        "description": "Kubernetes is an open-source container-orchestration system for automating deployment, scaling and management of containerized applications. It was originally designed by Google and is now maintained by the Cloud Native Computing Foundation."
     }
 ]

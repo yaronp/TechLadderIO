@@ -180,6 +180,7 @@ function renderContent(props: Props, tech: Technology) {
 }
 
 function renderHome(technologies: Technology[]) {
+    technologies = technologies.sort((a, b) => a.displayName.localeCompare(b.displayName));
     return `
         <style>
             h1 {
@@ -212,7 +213,9 @@ function renderHome(technologies: Technology[]) {
                     <tr class="topic">
                         <td>
                             <a href="/?tech=${t.id}">
-                                ${t.displayName}
+                                <b>
+                                    ${t.displayName}
+                                </b>
                             </a>
                         </td>
                         <td>
@@ -228,7 +231,7 @@ function renderHome(technologies: Technology[]) {
             }).join("")}
         <table>
         <div class="promo">
-            <h1>We need yout help!</h1>
+            <h1>We need your help!</h1>
             <p>
                 This is a community-driven project, please share your feedback and
                 help us to improve it. Please open an issue or send us a PR on Github!
