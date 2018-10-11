@@ -31,6 +31,7 @@ interface Theme {
 
 interface Technology {
     id: string;
+    isVisible: boolean;
     displayName: string;
     description: string;
 }
@@ -180,7 +181,8 @@ function renderContent(props: Props, tech: Technology) {
 }
 
 function renderHome(technologies: Technology[]) {
-    technologies = technologies.sort((a, b) => a.displayName.localeCompare(b.displayName));
+    technologies = technologies.sort((a, b) => a.displayName.localeCompare(b.displayName))
+                               .filter(t => t.isVisible);
     return `
         <style>
             h1 {
