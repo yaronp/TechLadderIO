@@ -53,5 +53,15 @@
         "id": "go",
         "displayName": "Go",
         "description": "Go is a programming language designed by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson. Go is a statically typed, compiled language in the tradition of C, with the added benefits of memory safety, garbage collection, structural typing, and CSP-style concurrency."
+    },
+    {
+        "id": "react",
+        "displayName": "React",
+        "description": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications."
+    },
+    {
+        "id": "angular",
+        "displayName": "Angular",
+        "description": "Angular is a TypeScript-based open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS."
     }
 ]
