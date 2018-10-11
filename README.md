@@ -6,7 +6,7 @@ This project was started as the TypeScript progression ladder (TSPL):
 
 > The TypeScript progression ladder (TSPL) is a grouping of concepts and skills relevant to TypeScript programming. > TSPL provides aspiring TypeScript programmers with a way to track and improve their TypeScript skills.
 
-However, one of the most recurrent initial pieces of feedback is that people would like to see a similar concept for other programming languages and technologies. The project was then extended to support an unlimited number of technologies. and rhe original GItHub repository was renamed from `TSPL` to TechLadderIO.
+However, one of the most recurrent initial pieces of feedback was that people would like to see a similar concept for other programming languages and technologies. The project was then extended to support an unlimited number of technologies. and rhe original GItHub repository was renamed from `TSPL` to TechLadderIO.
 
 ## Contributing
 
