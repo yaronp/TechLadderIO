@@ -1,4 +1,6 @@
-# TechLadderIO
+# Tech Ladder IO
+
+![](./assets/logo.png)
 
 ## About
 
