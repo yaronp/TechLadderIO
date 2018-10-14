@@ -26,9 +26,9 @@ Let's imagine that we want to create a new ladder for Microsoft Azure.
 
 3. We need to save the logo of the technology under its folder. In this example we will save the Microsoft Azure logo under `/technologies/azure/azure.png`. The file extension must be `.png`.
 
-4. We then need to create a JSON  file named `azure.json` under the same directory: `/technologies/azure/azure.json`. You can copy the contents of the JSON file from one of the existing ladders and change its contents later.
+4. We then need to create a JSON file named `azure.json` under the same directory: `/technologies/azure/azure.json`. You can copy the contents of the JSON file from one of the existing ladders and change its contents later.
 
-5. Finally, we need to add the to the ladder to the `/technologies/technologies.json` file. 
+5. Finally, we need to add the ladder to the `/technologies/technologies.json` file. 
 
 ## Compile and run the project
 
