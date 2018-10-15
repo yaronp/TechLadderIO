@@ -272,4 +272,3 @@ function mount(selector, html, done) {
         }
     });
 }); })();
-//# sourceMappingURL=index.js.map
