@@ -7,11 +7,17 @@
             "name": "NOVICE",
             "topics": [
                 {
-                    "name": "Lorem ipsum",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "JSX",
+                    "description": "React's JavaScript Syntax extention. Learn how it works and how to use it.",
                     "resources": [
-                        "https://www.example.com",
-                        "https://www.example.com"
+                        "https://reactjs.org/docs/introducing-jsx.html"
+                    ]
+                },
+                {
+                    "name": "Render Elements",
+                    "description": "Learn how to display JSX elements to the screen using React.",
+                    "resources": [
+                        "https://reactjs.org/docs/rendering-elements.html"
                     ]
                 }
             ]
