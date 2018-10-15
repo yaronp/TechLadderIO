@@ -1,6 +1,6 @@
 {
     "theme": {
-        "primaryColor": "#669f64"
+        "primaryColor": "#fb503b"
     },
     "levels": [
         {
@@ -62,7 +62,7 @@
             ]
         },
         {
-            "name": "Intermediate",
+            "name": "ADVANCED BEGINNER",
             "topics": [
                 {
                     "name": "Validation",
@@ -120,7 +120,7 @@
             ]
         },
         {
-            "name": "Advanced",
+            "name": "COMPETENT",
             "topics": [
                 {
                     "name": "Middleware",
@@ -176,7 +176,7 @@
             ]
         },
         {
-            "name": "Expert",
+            "name": "PROFICIENT",
             "topics": [
                 {
                     "name": "Encryption",
@@ -272,7 +272,7 @@
             ]
         },
         {
-            "name": "Professional",
+            "name": "EXPERT",
             "topics": [
                 {
                     "name": "Pagination",
