@@ -7,24 +7,217 @@
             "name": "NOVICE",
             "topics": [
                 {
-                    "name": "Lorem ipsum",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Line break rules",
+                    "description": "Understand line break rules In Go such as semicolon insertion and comma separator rules",
                     "resources": [
-                        "https://www.example.com",
-                        "https://www.example.com"
+                        "https://go101.org/article/line-break-rules.html",
+                        "https://golang.org/doc/effective_go.html#semicolons"
                     ]
-                }
+                },
+                {
+                    "name": "Variable rules",
+                    "description": "Understand rules about unused variables and exceptions to each case.",
+                    "resources": [
+                        "https://golang.org/doc/effective_go.html#blank_unused",
+                        "https://npf.io/2014/03/unused-variables-in-go/"
+                    ]
+                },
+                {
+                    "name": "Import rules",
+                    "description": "Rules about unused imports and exceptions to each case.",
+                    "resources": [
+                        "https://golang.org/doc/faq#unused_variables_and_imports",
+                        "https://npf.io/2014/03/unused-variables-in-go/"
+                    ]
+                },
+                {
+                    "name": "Type inference",
+                    "description": "Understand what is type inference when declaring variables.",
+                    "resources": [
+                        "https://tour.golang.org/basics/14"
+                    ]
+                },
+                {
+                    "name": "Type assertions",
+                    "description": "Understand what is type assertions and how to perform them.",
+                    "resources": [
+                        "https://tour.golang.org/methods/15",
+                        "https://medium.com/golangspec/type-assertions-in-go-e609759c42e1"
+                    ]
+                },
+                {
+                    "name": "Variable scopes",
+                    "description": "Understanding how scopes work and what is variable shadowing.",
+                    "resources": [
+                        "https://medium.com/golangspec/scopes-in-go-a6042bb4298c",
+                        "https://www.tutorialspoint.com/go/go_scope_rules.htm",
+                        "https://rpeshkov.net/blog/golang-variable-shadowing/"
+                    ]
+                },
+                {
+                    "name": "The nil value",
+                    "description": "Understanding how nil is handled in Go.",
+                    "resources": [
+                        "https://go101.org/article/nil.html",
+                        "https://www.gmarik.info/blog/2016/understanding-golang-nil-value/"
+                    ]
+                },
+                {
+                    "name": "Strings",
+                    "description": "Understanding how strings are represented.",
+                    "resources": [
+                        "https://blog.golang.org/strings",
+                        "https://golangbot.com/strings/",
+                        "https://go101.org/article/string.html"
+                    ]
+                },
+                {
+                    "name": "Slices and Arrays",
+                    "description": "Declare and work with Slices and Arrays.",
+                    "resources": [
+                        "https://blog.golang.org/go-slices-usage-and-internals",
+                        "https://dave.cheney.net/2018/07/12/slices-from-the-ground-up",
+                        "https://www.ardanlabs.com/blog/2013/08/understanding-slices-in-go-programming.html"
+                    ]
+                },
+                {
+                    "name": "Maps",
+                    "description": "Declare and work with Maps.",
+                    "resources": [
+                        "https://blog.golang.org/go-maps-in-action",
+                        "https://www.callicoder.com/golang-maps/",
+                        "https://golangbot.com/maps/"
+                    ]
+                },
+                {
+                    "name": "Range loop",
+                    "description": "Understanding how to loop using range in Go.",
+                    "resources": [
+                        "https://garbagecollected.org/2017/02/22/go-range-loop-internals/",
+                        "https://gobyexample.com/range",
+                        "https://github.com/golang/go/wiki/Range"
+                    ]
+                },
+                {
+                    "name": "Goroutines",
+                    "description": "",
+                    "resources": [
+                
+                    ]
+                },
+                {
+                    "name": "Channels",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Structs",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Interfaces",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Methods",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Errors",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Defered calls",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Exported/Unexported identifiers    ",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
             ]
         },
         {
             "name": "ADVANCED BEGINNER",
             "topics": [
                 {
-                    "name": "Lorem ipsum",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Underlying types",
+                    "description": "Understand underlying types and type identity rules.",
                     "resources": [
-                        "https://www.example.com",
-                        "https://www.example.com"
+                        "https://golang.org/ref/spec#Type_identity",
+                        "https://go101.org/article/type-system-overview.html"
+                    ]
+                },
+                {
+                    "name": "Type Embedding",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Type Composition",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Panic and Recover",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Reflection",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Pointers",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Concurrency Synchronization Techniques.",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Atomic Operations",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Race conditions and deadlocks",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Pointer vs value receivers",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "JSON/GOB encoding",
+                    "description": "",
+                    "resources": [
                     ]
                 }
             ]
@@ -33,11 +226,39 @@
             "name": "COMPETENT",
             "topics": [
                 {
-                    "name": "Lorem ipsum",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Unsafe types",
+                    "description": "",
                     "resources": [
-                        "https://www.example.com",
-                        "https://www.example.com"
+                    ]
+                },
+                {
+                    "name": "Bounds check elimination",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Value comparison and assignment rules",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Go Memory Model",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Type Alignment and Type Value Sizes",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Goto statements",
+                    "description": "",
+                    "resources": [
                     ]
                 }
             ]
@@ -46,11 +267,29 @@
             "name": "PROFICIENT",
             "topics": [
                 {
-                    "name": "Lorem ipsum",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Profiling Go programs",
+                    "description": "",
                     "resources": [
-                        "https://www.example.com",
-                        "https://www.example.com"
+                    
+                    ]
+                },
+                {
+                    "name": "Cgo",
+                    "description": "",
+                    "resources": [
+                    
+                    ]
+                },
+                {
+                    "name": "escape analysis",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "System Calls",
+                    "description": "",
+                    "resources": [
                     ]
                 }
             ]
@@ -59,23 +298,45 @@
             "name": "EXPERT",
             "topics": [
                 {
-                    "name": "Lorem ipsum",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Go Assembly",
+                    "description": "",
                     "resources": [
-                        "https://www.example.com",
-                        "https://www.example.com"
+                    ]
+                },
+                {
+                    "name": "Channel structure",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Garbage collector",
+                    "description": "",
+                    "resources": [
+                    ]
+                },
+                {
+                    "name": "Go modules",
+                    "description": "",
+                    "resources": [
+                        "https://github.com/golang/go/wiki/Modules",
+                        "https://dave.cheney.net/2018/07/14/taking-go-modules-for-a-spin"
                     ]
                 }
             ]
         }
     ],
     "notes": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ""
     ],
     "contributors": [
         {
             "name": "Remo H. Jansen",
             "contact": "https://twitter.com/RemoHJansen"
+        },
+        {
+            "name": "Theo Despoudis",
+            "contact": "https://twitter.com/nerdokto"
         }
     ]
 }
