@@ -36,6 +36,49 @@ interface Technology {
     description: string;
 }
 
+interface TopicProgress {
+    [key: string]: boolean;
+}
+
+interface Progress {
+    [key: string]: TopicProgress;
+}
+
+const localStorageKey = "__@@__user_progress";
+
+async function getProgress(): Promise<Progress> {
+    if (localStorage) {
+        const progressJson = localStorage.getItem(localStorageKey);
+        if (progressJson) {
+            const progress: Progress = JSON.parse(progressJson);
+            return Promise.resolve(progress);
+        } else {
+            const defaultValue = {};
+            const defaultValueJson = JSON.stringify(defaultValue);
+            localStorage.setItem(localStorageKey, defaultValueJson);
+            return Promise.resolve(defaultValue);
+        }
+    }
+    return Promise.reject();
+}
+
+async function setProgress(technologyId: string, topic: string, completed: boolean) {
+    const progress = await getProgress();
+    if (progress) {
+        if (progress[technologyId] === undefined) {
+            progress[technologyId] = {
+                [topic]: completed
+            };
+        } else {
+            progress[technologyId][topic] = completed;
+        }
+        const progressJson = JSON.stringify(progress);
+        localStorage.setItem(localStorageKey, progressJson);
+        return Promise.resolve(progress);
+    }
+    return Promise.reject();
+}
+
 function getParams(): Params {
     const search = window.location.search;
     if (search) {
@@ -63,15 +106,15 @@ function getTech(): string | undefined {
     return tech;
 }
 
-function getUrl(tech: string) {
+function getUrl(tech?: string) {
     if (tech !== undefined) {
-        return `./technologies/${tech}/${tech}.json`;
+        return `./technologies/${tech}/${tech}.json?cache=${new Date().getTime()}`;
     }
-    return "./technologies/technologies.json";
+    return `./technologies/technologies.json?cache=${new Date().getTime()}`;
 }
 
 async function fetchTechnologies(): Promise<Technology[]> {
-    const url = "./technologies/technologies.json";
+    const url = getUrl();
     const response = await fetch(url, {
         method: "GET"
     });
@@ -88,7 +131,8 @@ async function fetchData(tech: string): Promise<Props> {
     return data;
 }
 
-function renderContent(props: Props, tech: Technology) {
+async function renderContent(props: Props, tech: Technology) {
+    const progress = await getProgress();
     return `
         <style>
             h1 {
@@ -116,12 +160,13 @@ function renderContent(props: Props, tech: Technology) {
             ${
                 props.levels.map(l => `
                     <tr class="level">
-                        <td colspan="3">${l.name}</td>
+                        <td colspan="4">${l.name}</td>
                     </tr>
                     <tr class="level-subtitle">
                         <td>CONCEPTS</td>
                         <td>SKILLS</td>
                         <td>RESOURCES</td>
+                        <td>COMPLETED</td>
                     </tr>
                     ${
                         l.topics.map((t, i) => `
@@ -138,12 +183,31 @@ function renderContent(props: Props, tech: Technology) {
                                             <a
                                                 href="${r}"
                                                 target="_blank"
+                                                data-toggle="tooltip"
+                                                data-placement="left"
                                                 title="${r}"
                                             >
                                                 <i class="material-icons">link</i>
                                             </a>
                                         `).join("")
                                     }
+                                </td>
+                                <td>
+                                    <input
+                                        class="completed_checkbox"
+                                        type="checkbox"
+                                        name="${tech.id}_${t.name}"
+                                        data-lang="${tech.id}"
+                                        data-topic="${t.name}"
+                                        value="true"
+                                        ${(() => {
+                                            if (progress[tech.id]) {
+                                                if (progress[tech.id][t.name]) {
+                                                    return `checked="checked`;
+                                                }
+                                            }
+                                        })()}"
+                                    >
                                 </td>
                             </tr>
                         `).join("")
@@ -224,7 +288,12 @@ function renderHome(technologies: Technology[]) {
                             ${t.description}
                         </td>
                         <td>
-                            <a href="/?tech=${t.id}">
+                            <a
+                                href="/?tech=${t.id}"
+                                data-toggle="tooltip"
+                                data-placement="left"
+                                title="${t.displayName}"
+                            >
                                 <i class="material-icons">link</i>
                             </a>
                         </td>
@@ -247,10 +316,13 @@ function renderError(e: string) {
     return `${e}`;
 }
 
-function mount(selector: string, html: string) {
+function mount(selector: string, html: string, done?: Function) {
     const $e = document.querySelector(selector);
     if ($e) {
         $e.innerHTML = html;
+        if (done) {
+            done();
+        }
     }
 }
 
@@ -270,10 +342,20 @@ function mount(selector: string, html: string) {
         } else {
             const data = await fetchData(techId!);
             const tech = technologies.find(t => t.id === techId);
-            html = renderContent(data, tech!);
+            html = await renderContent(data, tech!);
         }
         
-        mount(root, html);
+        mount(root, html, () => {
+            $("a").tooltip();
+            $(".completed_checkbox").on("change", (e) => {
+                (async () => {
+                    const target = $(e.target);
+                    const data = $(e.target).data();
+                    const isChecked = target.is(":checked");
+                    await setProgress(data.lang, data.topic, isChecked);
+                })();
+            });
+        });
 
     } catch(e) {
         const html = renderError(e.message);
