@@ -2,612 +2,597 @@
     "theme": {
         "primaryColor": "#0077d2"
     },
-    "levels": [
-        {
-            "name": "NOVICE",
-            "topics": [
-                {
-                    "name": "Type inference",
-                    "description": "Understand how TS automatically identifies the type of a variable or object",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/type-inference.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/type-inference.html"
-                    ]
-                },
-                {
-                    "name": "Type annotations",
-                    "description": "Declare the types of a variable or object when the type inference system is not enough",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/types/type-system.html",
-                        "http://2ality.com/2018/04/type-notation-typescript.html"
-                    ]
-                },
-                {
-                    "name": "Primitive types",
-                    "description": "Declare and work with basic types",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/basic-types.html"
-                    ]
-                },
-                {
-                    "name": "Non-nullable types",
-                    "description": "Avoid potential error by making null and undefined explicit",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2016/09/27/typescript-2-0-non-nullable-types",
-                        "https://www.typescriptlang.org/docs/handbook/advanced-types.html#nullable-types"
-                    ]
-                },
-                {
-                    "name": "Structural type system",
-                    "description": "Understand the difference with a nominal type system and the type compatibility rules",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/type-compatibility.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/type-compatibility.html"
-                    ]
-                },
-                {
-                    "name": "Function declarations & function expressions",
-                    "description": "Understand the differences between function expressions and declarations",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/functions.html",
-                        "https://www.sitepoint.com/function-expressions-vs-declarations/"
-                    ]
-                },
-                {
-                    "name": "Enumerations",
-                    "description": "Avoid magic strings and code duplication",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/enums.html",
-                        "https://basarat.gitbooks.io/typescript/docs/enums.html",
-                        "https://medium.com/@katbusch/typescript-enums-explained-e5f9a101afc9"
-                    ]
-                },
-                {
-                    "name": "Object literals",
-                    "description": "Declare and work with object instances",
-                    "resources": [
-                        "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics",
-                        "http://trainologic.com/object-literals-in-typescript/",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer"
-                    ]
-                },
-                {
-                    "name": "Arrays",
-                    "description": "Declare and work with arrays",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/basic-types.html#array"
-                    ]
-                },
-                {
-                    "name": "Tuples",
-                    "description": "Declare and work with tuples",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple"
-                    ]
-                },
-                {
-                    "name": "Interfaces",
-                    "description": "Declare and work with interfaces",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/interfaces.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/interfaces.html"
-                    ]
-                },
-                {
-                    "name": "Classes",
-                    "description": "Declare and work with classes",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/classes.html",
-                        "https://basarat.gitbooks.io/typescript/docs/classes.html"
-                    ]
-                },
-                {
-                    "name": "Modules",
-                    "description": "Organize code bases",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/modules.html",
-                        "https://basarat.gitbooks.io/typescript/docs/project/modules.html"
-                    ]
-                },
-                {
-                    "name": "Namespaces",
-                    "description": "Declare and work with namespaces",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/namespaces.html",
-                        "http://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html",
-                        "https://basarat.gitbooks.io/typescript/docs/project/namespaces.html"
-                    ]
-                },
-                {
-                    "name": "Triple-Slash Directives",
-                    "description": "Include additional type definition files in the compilation process",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html"
-                    ]
-                },
-                {
-                    "name": "String templates & tagged templates",
-                    "description": "Generate new strings at runtime",
-                    "resources": [
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
-                        "https://basarat.gitbooks.io/typescript/docs/template-strings.html"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "ADVANCED BEGINNER",
-            "topics": [
-                {
-                    "name": "Local types",
-                    "description": "Declare local classes, interfaces, enums, and type aliases ",
-                    "resources": [
-                        "https://github.com/Microsoft/TypeScript/pull/3266"
-                    ]
-                },
-                {
-                    "name": "Ambient declarations",
-                    "description": "Work with existing JavaScript libraries and APIs",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/types/ambient/intro.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/ambient/d.ts.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/ambient/variables.html"
-                    ]
-                },
-                {
-                    "name": "Scope and hoisting",
-                    "description": "Prevent issues by limiting the scope of variables",
-                    "resources": [
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var",
-                        "https://basarat.gitbooks.io/typescript/docs/let.html",
-                        "https://basarat.gitbooks.io/typescript/docs/const.html"
-                    ]
-                },
-                {
-                    "name": "Type assertions and casting",
-                    "description": "Change the type of a variable or object",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/types/type-assertion.html"
-                    ]
-                },
-                {
-                    "name": "Function types",
-                    "description": "Declare the type of functions such as callbacks",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/functions.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/functions.html"
-                    ]
-                },
-                {
-                    "name": "Arrow functions",
-                    "description": "Prevent issues with the this operator",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/arrow-functions.html"
-                    ]
-                },
-                {
-                    "name": "Optional and default parameters",
-                    "description": "Declare optional and default function arguments",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/functions.html#optional-and-default-parameters"
-                    ]
-                },
-                {
-                    "name": "Rest parameters",
-                    "description": "Declare functions with an arbitrary number of arguments",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/functions.html#rest-parameters"
-                    ]
-                },
-                {
-                    "name": "Destructuring assignment",
-                    "description": "Extract variables from the properties of an object",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/destructuring.html",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
-                    ]
-                },
-                {
-                    "name": "Union types",
-                    "description": "Declare wider types from existing types",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types"
-                    ]
-                },
-                {
-                    "name": "Intersection types",
-                    "description": "Declare narrower types from existing types",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types"
-                    ]
-                },
-                {
-                    "name": "Type aliases",
-                    "description": "Declare aliases for existing types",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases"
-                    ]
-                },
-                {
-                    "name": "Literal types",
-                    "description": "Narrow down primitive types to concrete values such as object keys",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#string-literal-types",
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#numeric-literal-types"
-                    ]
-                },
-                {
-                    "name": "Control-flow analysis",
-                    "description": "Understand how TypeScript narrows down a given types",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2016/09/30/typescript-2-0-control-flow-based-type-analysis"
-                    ]
-                },
-                {
-                    "name": "Type guards",
-                    "description": "Have control over how the TypeScript compiler narrows down a given type",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types",
-                        "https://basarat.gitbooks.io/typescript/docs/types/typeGuard.html"
-                    ]
-                },
-                {
-                    "name": "The never type",
-                    "description": "Detect dead end code paths and unnecessary type guards",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2016/11/18/typescript-2-0-the-never-type"
-                    ]
-                },
-                {
-                    "name": "The unknown type",
-                    "description": "Prevent errors by making uncertainty explicit",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type"
-                    ]
-                },
-                {
-                    "name": "Readonly",
-                    "description": "Prevent issues by avoiding property mutations",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2016/10/31/typescript-2-0-read-only-properties",
-                        "https://basarat.gitbooks.io/typescript/docs/types/readonly.html"
-                    ]
-                },
-                {
-                    "name": "Strict property initialization",
-                    "description": "Prevent errors by ensuring that classes are correctly initialized",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2018/05/20/typescript-2-7-strict-property-initialization"
-                    ]
-                },
-                {
-                    "name": "Inheritance",
-                    "description": "Re-use code by extending existing classes",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/classes.html#inheritance",
-                        "https://basarat.gitbooks.io/typescript/content/docs/classes.html#inheritance"
-                    ]
-                },
-                {
-                    "name": "Mixins",
-                    "description": "Take advantage situations in which multiple inheritance is safe",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/mixins.html",
-                        "https://basarat.gitbooks.io/typescript/docs/types/mixins.html",
-                        "https://blog.mariusschulz.com/2017/05/26/typescript-2-2-mixin-classes"
+    "levels": {
+        "novice": [
+            {
+                "name": "Type inference",
+                "description": "Understand how TS automatically identifies the type of a variable or object",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/type-inference.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/type-inference.html"
+                ]
+            },
+            {
+                "name": "Type annotations",
+                "description": "Declare the types of a variable or object when the type inference system is not enough",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/types/type-system.html",
+                    "http://2ality.com/2018/04/type-notation-typescript.html"
+                ]
+            },
+            {
+                "name": "Primitive types",
+                "description": "Declare and work with basic types",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/basic-types.html"
+                ]
+            },
+            {
+                "name": "Non-nullable types",
+                "description": "Avoid potential error by making null and undefined explicit",
+                "resources": [
+                    "https://blog.mariusschulz.com/2016/09/27/typescript-2-0-non-nullable-types",
+                    "https://www.typescriptlang.org/docs/handbook/advanced-types.html#nullable-types"
+                ]
+            },
+            {
+                "name": "Structural type system",
+                "description": "Understand the difference with a nominal type system and the type compatibility rules",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/type-compatibility.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/type-compatibility.html"
+                ]
+            },
+            {
+                "name": "Function declarations & function expressions",
+                "description": "Understand the differences between function expressions and declarations",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/functions.html",
+                    "https://www.sitepoint.com/function-expressions-vs-declarations/"
+                ]
+            },
+            {
+                "name": "Enumerations",
+                "description": "Avoid magic strings and code duplication",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/enums.html",
+                    "https://basarat.gitbooks.io/typescript/docs/enums.html",
+                    "https://medium.com/@katbusch/typescript-enums-explained-e5f9a101afc9"
+                ]
+            },
+            {
+                "name": "Object literals",
+                "description": "Declare and work with object instances",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics",
+                    "http://trainologic.com/object-literals-in-typescript/",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer"
+                ]
+            },
+            {
+                "name": "Arrays",
+                "description": "Declare and work with arrays",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/basic-types.html#array"
+                ]
+            },
+            {
+                "name": "Tuples",
+                "description": "Declare and work with tuples",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple"
+                ]
+            },
+            {
+                "name": "Interfaces",
+                "description": "Declare and work with interfaces",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/interfaces.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/interfaces.html"
+                ]
+            },
+            {
+                "name": "Classes",
+                "description": "Declare and work with classes",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/classes.html",
+                    "https://basarat.gitbooks.io/typescript/docs/classes.html"
+                ]
+            },
+            {
+                "name": "Modules",
+                "description": "Organize code bases",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/modules.html",
+                    "https://basarat.gitbooks.io/typescript/docs/project/modules.html"
+                ]
+            },
+            {
+                "name": "Namespaces",
+                "description": "Declare and work with namespaces",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/namespaces.html",
+                    "http://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html",
+                    "https://basarat.gitbooks.io/typescript/docs/project/namespaces.html"
+                ]
+            },
+            {
+                "name": "Triple-Slash Directives",
+                "description": "Include additional type definition files in the compilation process",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html"
+                ]
+            },
+            {
+                "name": "String templates & tagged templates",
+                "description": "Generate new strings at runtime",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+                    "https://basarat.gitbooks.io/typescript/docs/template-strings.html"
+                ]
+            }
+        ],
+        "advanced_beginner": [
+            {
+                "name": "Local types",
+                "description": "Declare local classes, interfaces, enums, and type aliases ",
+                "resources": [
+                    "https://github.com/Microsoft/TypeScript/pull/3266"
+                ]
+            },
+            {
+                "name": "Ambient declarations",
+                "description": "Work with existing JavaScript libraries and APIs",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/types/ambient/intro.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/ambient/d.ts.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/ambient/variables.html"
+                ]
+            },
+            {
+                "name": "Scope and hoisting",
+                "description": "Prevent issues by limiting the scope of variables",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var",
+                    "https://basarat.gitbooks.io/typescript/docs/let.html",
+                    "https://basarat.gitbooks.io/typescript/docs/const.html"
+                ]
+            },
+            {
+                "name": "Type assertions and casting",
+                "description": "Change the type of a variable or object",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/types/type-assertion.html"
+                ]
+            },
+            {
+                "name": "Function types",
+                "description": "Declare the type of functions such as callbacks",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/functions.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/functions.html"
+                ]
+            },
+            {
+                "name": "Arrow functions",
+                "description": "Prevent issues with the this operator",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/arrow-functions.html"
+                ]
+            },
+            {
+                "name": "Optional and default parameters",
+                "description": "Declare optional and default function arguments",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/functions.html#optional-and-default-parameters"
+                ]
+            },
+            {
+                "name": "Rest parameters",
+                "description": "Declare functions with an arbitrary number of arguments",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/functions.html#rest-parameters"
+                ]
+            },
+            {
+                "name": "Destructuring assignment",
+                "description": "Extract variables from the properties of an object",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/destructuring.html",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+                ]
+            },
+            {
+                "name": "Union types",
+                "description": "Declare wider types from existing types",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types"
+                ]
+            },
+            {
+                "name": "Intersection types",
+                "description": "Declare narrower types from existing types",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types"
+                ]
+            },
+            {
+                "name": "Type aliases",
+                "description": "Declare aliases for existing types",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases"
+                ]
+            },
+            {
+                "name": "Literal types",
+                "description": "Narrow down primitive types to concrete values such as object keys",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#string-literal-types",
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#numeric-literal-types"
+                ]
+            },
+            {
+                "name": "Control-flow analysis",
+                "description": "Understand how TypeScript narrows down a given types",
+                "resources": [
+                    "https://blog.mariusschulz.com/2016/09/30/typescript-2-0-control-flow-based-type-analysis"
+                ]
+            },
+            {
+                "name": "Type guards",
+                "description": "Have control over how the TypeScript compiler narrows down a given type",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types",
+                    "https://basarat.gitbooks.io/typescript/docs/types/typeGuard.html"
+                ]
+            },
+            {
+                "name": "The never type",
+                "description": "Detect dead end code paths and unnecessary type guards",
+                "resources": [
+                    "https://blog.mariusschulz.com/2016/11/18/typescript-2-0-the-never-type"
+                ]
+            },
+            {
+                "name": "The unknown type",
+                "description": "Prevent errors by making uncertainty explicit",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type"
+                ]
+            },
+            {
+                "name": "Readonly",
+                "description": "Prevent issues by avoiding property mutations",
+                "resources": [
+                    "https://blog.mariusschulz.com/2016/10/31/typescript-2-0-read-only-properties",
+                    "https://basarat.gitbooks.io/typescript/docs/types/readonly.html"
+                ]
+            },
+            {
+                "name": "Strict property initialization",
+                "description": "Prevent errors by ensuring that classes are correctly initialized",
+                "resources": [
+                    "https://blog.mariusschulz.com/2018/05/20/typescript-2-7-strict-property-initialization"
+                ]
+            },
+            {
+                "name": "Inheritance",
+                "description": "Re-use code by extending existing classes",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/classes.html#inheritance",
+                    "https://basarat.gitbooks.io/typescript/content/docs/classes.html#inheritance"
+                ]
+            },
+            {
+                "name": "Mixins",
+                "description": "Take advantage situations in which multiple inheritance is safe",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/mixins.html",
+                    "https://basarat.gitbooks.io/typescript/docs/types/mixins.html",
+                    "https://blog.mariusschulz.com/2017/05/26/typescript-2-2-mixin-classes"
 
-                    ]
-                },
-                {
-                    "name": "Abstract classes",
-                    "description": "Reuse code using abstract classes",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/classes.html#abstract-classes",
-                        "https://basarat.gitbooks.io/typescript/content/docs/classes.html#abstract"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "COMPETENT",
-            "topics": [
-                {
-                    "name": "Built-in type declarations (lib.d.ts)",
-                    "description": "Avoid re-declaring existing JavaScript APIs",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2016/11/25/typescript-2-0-built-in-type-declarations"
-                    ]
-                },
-                {
-                    "name": "Index signature",
-                    "description": "Type-safe property access by index",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/advanced-types.html#index-types",
-                        "https://basarat.gitbooks.io/typescript/docs/types/index-signatures.html"
-                    ]
-                },
-                {
-                    "name": "Weak types",
-                    "description": "Prevent adding wrong properties to objects with optional properties",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2017/12/01/typescript-2-4-weak-type-detection",
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#index-types"
-                    ]
-                },
-                {
-                    "name": "Function overloading",
-                    "description": "Create multiple functions of the same name with different arguments",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2016/08/18/function-overloads-in-typescript",
-                        "https://www.typescriptlang.org/docs/handbook/functions.html#overloads"
-                    ]
-                },
-                {
-                    "name": "Closures",
-                    "description": "Implement higher-order functions",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/javascript/closure.html",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
-                    ]
-                },
-                {
-                    "name": "Prototypes",
-                    "description": "Understand how objects and inheritance work at runtime",
-                    "resources": [
-                        "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
-                    ]
-                },
-                {
-                    "name": "The this operator",
-                    "description": "Prevent and understand potential runtime issues",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/content/docs/javascript/this.html",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"
-                    ]
-                },
-                {
-                    "name": "Generic types",
-                    "description": "Avoid type assertions in re-usable code",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/generics.html"
-                    ]
-                },
-                {
-                    "name": "Generic defaults",
-                    "description": "Avoid empty object as the default value for generic parameters",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2017/06/02/typescript-2-3-generic-parameter-defaults"
-                    ]
-                },
-                {
-                    "name": "Generic constraints",
-                    "description": "Limit the types that can be used as a generic parameter",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/generics.html#generic-constraints"
-                    ]
-                },
-                {
-                    "name": "Custom type guards",
-                    "description": "Narrow down union types",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards",
-                        "https://basarat.gitbooks.io/typescript/docs/types/typeGuard.html#user-defined-type-guards"
-                    ]
-                },
-                {
-                    "name": "Promises",
-                    "description": "Avoid callback hells and gain more control over asynchronous operations",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/promise.html",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-                    ]
-                },
-                {
-                    "name": "Async/await",
-                    "description": "Write asynchronous code that looks synchronous",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/async-await.html",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"
-                    ]
-                },
-                {
-                    "name": "Decorators",
-                    "description": "Implement the decorator pattern and declare metadata for libraries and tools",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/decorators.html"
-                    ]
-                },
-                {
-                    "name": "Symbols",
-                    "description": "Declare unique identifiers at runtime",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/symbols.html"
-                    ]
-                },
-                {
-                    "name": "JSX",
-                    "description": "Understand the template systems of UI libraries such as React",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/jsx.html"
-                    ]
-                },
-                {
-                    "name": "Discriminated unions",
-                    "description": "Narrow down union types using literal types",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions",
-                        "https://basarat.gitbooks.io/typescript/docs/types/discriminated-unions.html"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "PROFICIENT",
-            "topics": [
-                {
-                    "name": "The keyof operator",
-                    "description": "Extract the keys of an object as literal types",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2017/01/06/typescript-2-1-keyof-and-lookup-types"
-                    ]
-                },
-                {
-                    "name": "Lookup types",
-                    "description": "Use literal types and index types to extract the type of a property of a given type",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2017/01/06/typescript-2-1-keyof-and-lookup-types"
-                    ]
-                },
-                {
-                    "name": "Polymorphic this type",
-                    "description": "Express hierarchical fluent interfaces with ease",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/advanced-types.html#polymorphic-this-types"
-                    ]
-                },
-                {
-                    "name": "Mapped types",
-                    "description": "Map the type of all the properties in an object to a different type",
-                    "resources": [
-                        "https://blog.mariusschulz.com/2017/01/20/typescript-2-1-mapped-types",
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types"
-                    ]
-                },
-                {
-                    "name": "Built-in mapped types",
-                    "description": "Avoid re-declaring existing mapped types",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick"
-                    ]
-                },
-                {
-                    "name": "Conditional types",
-                    "description": "Map the type of some of the properties in an object to a different type",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#conditional-types"
-                    ]
-                },
-                {
-                    "name": "Built-in conditional types",
-                    "description": "Avoid re-declaring existing conditional types",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/advanced-types.html#predefined-conditional-types"
-                    ]
-                },
-                {
-                    "name": "The infer keyword",
-                    "description": "Extract types from existing types such as the value of an element in an array or the return in a function",
-                    "resources": [
-                        "https://dev.to/miracleblue/how-2-typescript-serious-business-with-typescripts-infer-keyword-40i5"
-                    ]
-                },
-                {
-                    "name": "Generators (function*)",
-                    "description": "Declare functions that can be exited and later re-entered",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield"
-                    ]
-                },
-                {
-                    "name": "Asynchronous generators and iterators (for await … of)",
-                    "description": "Iterate collections for asynchronous values",
-                    "resources": [
-                        "http://2ality.com/2017/12/for-await-of-sync-iterables.html",
-                        "https://www.youtube.com/watch?v=I5oDbp_U-fQ"
-                    ]
-                },
-                {
-                    "name": "Delegating to another generator (yield*)",
-                    "description": "Implement sagas and other advances asynchronous programming patterns",
-                    "resources": [
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*"
-                    ]
-                },
-                {
-                    "name": "Type Checking JavaScript Files",
-                    "description": "Find type errors in JavaScript files",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html",
-                        "https://blog.mariusschulz.com/2017/06/16/typescript-2-3-type-checking-javascript-files-with-checkjs"
-                    ]
-                },
-                {
-                    "name": "Function, bind, call and apply",
-                    "description": "Partially apply functions",
-                    "resources": [
-                        "https://github.com/Microsoft/TypeScript/pull/27028",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply",
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"
-                    ]
-                },
-                {
-                    "name": "The JavaScript event loop",
-                    "description": "Understand potential complex runtime and performance issues",
-                    "resources": [
-                        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop",
-                        "https://medium.com/front-end-hacking/javascript-event-loop-explained-4cd26af121d4"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "EXPERT",
-            "topics": [
-                {
-                    "name": "Module resolution rules",
-                    "description": "Understand how TypeScript resolves modules",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/module-resolution.html"
-                    ]
-                },
-                {
-                    "name": "Implement type definitions",
-                    "description": "Create type definitions when they are not available",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html",
-                        "http://blog.wolksoftware.com/contributing-to-definitelytyped"
-                    ]
-                },
-                {
-                    "name": "Compiler internal APIs",
-                    "description": "Create code analysis tools and contribute to the compiler",
-                    "resources": [
-                        "https://basarat.gitbooks.io/typescript/docs/compiler/overview.html",
-                        "https://www.youtube.com/watch?v=WkJagE7b5U0",
-                        "https://dev.to/remojansen/learn-how-to-contribute-to-the-typescript-compiler-on-github-through-a-real-world-example-4df0"
-                    ]
-                },
-                {
-                    "name": "Language services APIs",
-                    "description": "Create code analysis tools and IDE plugins",
-                    "resources": [
-                        "https://github.com/Microsoft/TypeScript/wiki/Using-the-Language-Service-API"
-                    ]
-                },
-                {
-                    "name": "Path mapping",
-                    "description": "Simplify refactoring of directories in large projects",
-                    "resources": [
-                        "http://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping",
-                        "https://stackoverflow.com/questions/43281741/how-to-use-paths-in-tsconfig-json"
-                    ]
-                },
-                {
-                    "name": "Project references",
-                    "description": "Faster build for large projects and monorepos",
-                    "resources": [
-                        "https://www.typescriptlang.org/docs/handbook/project-references.html"
-                    ]
-                }
-            ]
-        }
-    ],
+                ]
+            },
+            {
+                "name": "Abstract classes",
+                "description": "Reuse code using abstract classes",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/classes.html#abstract-classes",
+                    "https://basarat.gitbooks.io/typescript/content/docs/classes.html#abstract"
+                ]
+            }
+        ],
+        "competent": [
+            {
+                "name": "Built-in type declarations (lib.d.ts)",
+                "description": "Avoid re-declaring existing JavaScript APIs",
+                "resources": [
+                    "https://blog.mariusschulz.com/2016/11/25/typescript-2-0-built-in-type-declarations"
+                ]
+            },
+            {
+                "name": "Index signature",
+                "description": "Type-safe property access by index",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/advanced-types.html#index-types",
+                    "https://basarat.gitbooks.io/typescript/docs/types/index-signatures.html"
+                ]
+            },
+            {
+                "name": "Weak types",
+                "description": "Prevent adding wrong properties to objects with optional properties",
+                "resources": [
+                    "https://blog.mariusschulz.com/2017/12/01/typescript-2-4-weak-type-detection",
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#index-types"
+                ]
+            },
+            {
+                "name": "Function overloading",
+                "description": "Create multiple functions of the same name with different arguments",
+                "resources": [
+                    "https://blog.mariusschulz.com/2016/08/18/function-overloads-in-typescript",
+                    "https://www.typescriptlang.org/docs/handbook/functions.html#overloads"
+                ]
+            },
+            {
+                "name": "Closures",
+                "description": "Implement higher-order functions",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/javascript/closure.html",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
+                ]
+            },
+            {
+                "name": "Prototypes",
+                "description": "Understand how objects and inheritance work at runtime",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+                ]
+            },
+            {
+                "name": "The this operator",
+                "description": "Prevent and understand potential runtime issues",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/content/docs/javascript/this.html",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"
+                ]
+            },
+            {
+                "name": "Generic types",
+                "description": "Avoid type assertions in re-usable code",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/generics.html"
+                ]
+            },
+            {
+                "name": "Generic defaults",
+                "description": "Avoid empty object as the default value for generic parameters",
+                "resources": [
+                    "https://blog.mariusschulz.com/2017/06/02/typescript-2-3-generic-parameter-defaults"
+                ]
+            },
+            {
+                "name": "Generic constraints",
+                "description": "Limit the types that can be used as a generic parameter",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/generics.html#generic-constraints"
+                ]
+            },
+            {
+                "name": "Custom type guards",
+                "description": "Narrow down union types",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards",
+                    "https://basarat.gitbooks.io/typescript/docs/types/typeGuard.html#user-defined-type-guards"
+                ]
+            },
+            {
+                "name": "Promises",
+                "description": "Avoid callback hells and gain more control over asynchronous operations",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/promise.html",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+                ]
+            },
+            {
+                "name": "Async/await",
+                "description": "Write asynchronous code that looks synchronous",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/async-await.html",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await"
+                ]
+            },
+            {
+                "name": "Decorators",
+                "description": "Implement the decorator pattern and declare metadata for libraries and tools",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/decorators.html"
+                ]
+            },
+            {
+                "name": "Symbols",
+                "description": "Declare unique identifiers at runtime",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/symbols.html"
+                ]
+            },
+            {
+                "name": "JSX",
+                "description": "Understand the template systems of UI libraries such as React",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/jsx.html"
+                ]
+            },
+            {
+                "name": "Discriminated unions",
+                "description": "Narrow down union types using literal types",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions",
+                    "https://basarat.gitbooks.io/typescript/docs/types/discriminated-unions.html"
+                ]
+            }
+        ],
+        "proficient": [
+            {
+                "name": "The keyof operator",
+                "description": "Extract the keys of an object as literal types",
+                "resources": [
+                    "https://blog.mariusschulz.com/2017/01/06/typescript-2-1-keyof-and-lookup-types"
+                ]
+            },
+            {
+                "name": "Lookup types",
+                "description": "Use literal types and index types to extract the type of a property of a given type",
+                "resources": [
+                    "https://blog.mariusschulz.com/2017/01/06/typescript-2-1-keyof-and-lookup-types"
+                ]
+            },
+            {
+                "name": "Polymorphic this type",
+                "description": "Express hierarchical fluent interfaces with ease",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/advanced-types.html#polymorphic-this-types"
+                ]
+            },
+            {
+                "name": "Mapped types",
+                "description": "Map the type of all the properties in an object to a different type",
+                "resources": [
+                    "https://blog.mariusschulz.com/2017/01/20/typescript-2-1-mapped-types",
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types"
+                ]
+            },
+            {
+                "name": "Built-in mapped types",
+                "description": "Avoid re-declaring existing mapped types",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick"
+                ]
+            },
+            {
+                "name": "Conditional types",
+                "description": "Map the type of some of the properties in an object to a different type",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#conditional-types"
+                ]
+            },
+            {
+                "name": "Built-in conditional types",
+                "description": "Avoid re-declaring existing conditional types",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/advanced-types.html#predefined-conditional-types"
+                ]
+            },
+            {
+                "name": "The infer keyword",
+                "description": "Extract types from existing types such as the value of an element in an array or the return in a function",
+                "resources": [
+                    "https://dev.to/miracleblue/how-2-typescript-serious-business-with-typescripts-infer-keyword-40i5"
+                ]
+            },
+            {
+                "name": "Generators (function*)",
+                "description": "Declare functions that can be exited and later re-entered",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield"
+                ]
+            },
+            {
+                "name": "Asynchronous generators and iterators (for await … of)",
+                "description": "Iterate collections for asynchronous values",
+                "resources": [
+                    "http://2ality.com/2017/12/for-await-of-sync-iterables.html",
+                    "https://www.youtube.com/watch?v=I5oDbp_U-fQ"
+                ]
+            },
+            {
+                "name": "Delegating to another generator (yield*)",
+                "description": "Implement sagas and other advances asynchronous programming patterns",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*"
+                ]
+            },
+            {
+                "name": "Type Checking JavaScript Files",
+                "description": "Find type errors in JavaScript files",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html",
+                    "https://blog.mariusschulz.com/2017/06/16/typescript-2-3-type-checking-javascript-files-with-checkjs"
+                ]
+            },
+            {
+                "name": "Function, bind, call and apply",
+                "description": "Partially apply functions",
+                "resources": [
+                    "https://github.com/Microsoft/TypeScript/pull/27028",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"
+                ]
+            },
+            {
+                "name": "The JavaScript event loop",
+                "description": "Understand potential complex runtime and performance issues",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop",
+                    "https://medium.com/front-end-hacking/javascript-event-loop-explained-4cd26af121d4"
+                ]
+            }
+        ],
+        "expert": [
+            {
+                "name": "Module resolution rules",
+                "description": "Understand how TypeScript resolves modules",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/module-resolution.html"
+                ]
+            },
+            {
+                "name": "Implement type definitions",
+                "description": "Create type definitions when they are not available",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html",
+                    "http://blog.wolksoftware.com/contributing-to-definitelytyped"
+                ]
+            },
+            {
+                "name": "Compiler internal APIs",
+                "description": "Create code analysis tools and contribute to the compiler",
+                "resources": [
+                    "https://basarat.gitbooks.io/typescript/docs/compiler/overview.html",
+                    "https://www.youtube.com/watch?v=WkJagE7b5U0",
+                    "https://dev.to/remojansen/learn-how-to-contribute-to-the-typescript-compiler-on-github-through-a-real-world-example-4df0"
+                ]
+            },
+            {
+                "name": "Language services APIs",
+                "description": "Create code analysis tools and IDE plugins",
+                "resources": [
+                    "https://github.com/Microsoft/TypeScript/wiki/Using-the-Language-Service-API"
+                ]
+            },
+            {
+                "name": "Path mapping",
+                "description": "Simplify refactoring of directories in large projects",
+                "resources": [
+                    "http://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping",
+                    "https://stackoverflow.com/questions/43281741/how-to-use-paths-in-tsconfig-json"
+                ]
+            },
+            {
+                "name": "Project references",
+                "description": "Faster build for large projects and monorepos",
+                "resources": [
+                    "https://www.typescriptlang.org/docs/handbook/project-references.html"
+                ]
+            }
+        ]
+    },
     "notes": [
         "Please note: some of the preceding topics such as promises are not only relevant to TypeScript (as they are also relevant to JavaScript). These topics have been included because we assume that a novice reader has no previous experience with both JavaScript and TypeScript",
         "This is a community-driven document, please share your feedback, help us to improve it. Please open an issue or send us a PR on Github!"
