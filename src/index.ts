@@ -4,9 +4,8 @@ interface Topic {
     resources: string[];
 }
 
-interface Level {
-    name: string;
-    topics: Topic[];
+interface Levels {
+    [key: string]: Topic[];
 }
 
 interface Contributor {
@@ -16,7 +15,7 @@ interface Contributor {
 
 interface Props {
     theme: Theme,
-    levels: Level[];
+    levels: Levels;
     notes: string[];
     contributors: Contributor[];
 }
@@ -133,6 +132,7 @@ async function fetchData(tech: string): Promise<Props> {
 
 async function renderContent(props: Props, tech: Technology) {
     const progress = await getProgress();
+    const levels = Object.keys(props.levels);
     return `
         <style>
             h1 {
@@ -158,9 +158,26 @@ async function renderContent(props: Props, tech: Technology) {
         </h4>
         <table>
             ${
-                props.levels.map(l => `
+                levels.map(level => `
                     <tr class="level">
-                        <td colspan="4">${l.name}</td>
+                        <td colspan="4">
+                            ${(() => {
+                                switch (level) {
+                                    case "novice":
+                                        return "NOVICE";
+                                    case "advanced_beginner":
+                                        return "ADVANCED BEGINNER";
+                                    case "competent":
+                                        return "COMPETENT";
+                                    case "proficient":
+                                        return "PROFICIENT";
+                                    case "expert":
+                                        return "EXPERT";
+                                    default:
+                                        throw new Error(`Unknown level ${level}`);
+                                }
+                            })()}
+                        </td>
                     </tr>
                     <tr class="level-subtitle">
                         <td>CONCEPTS</td>
@@ -169,23 +186,23 @@ async function renderContent(props: Props, tech: Technology) {
                         <td>COMPLETED</td>
                     </tr>
                     ${
-                        l.topics.map((t, i) => `
-                            <tr class="topic ${i === l.topics.length -1 ? "last" : ""}">
+                        props.levels[level].map((topic, topicIndex) => `
+                            <tr class="topic ${topicIndex === level.length -1 ? "last" : ""}">
                                 <td>
-                                    ${t.name}
+                                    ${topic.name}
                                 </td>
                                 <td>
-                                    ${t.description}
+                                    ${topic.description}
                                 </td>
                                 <td>
                                     ${
-                                        t.resources.map(r => `
+                                        topic.resources.map(resource => `
                                             <a
-                                                href="${r}"
+                                                href="${resource}"
                                                 target="_blank"
                                                 data-toggle="tooltip"
                                                 data-placement="left"
-                                                title="${r}"
+                                                title="${resource}"
                                             >
                                                 <i class="material-icons">link</i>
                                             </a>
@@ -196,13 +213,13 @@ async function renderContent(props: Props, tech: Technology) {
                                     <input
                                         class="completed_checkbox"
                                         type="checkbox"
-                                        name="${tech.id}_${t.name}"
+                                        name="${tech.id}_${topic.name}"
                                         data-lang="${tech.id}"
-                                        data-topic="${t.name}"
+                                        data-topic="${topic.name}"
                                         value="true"
                                         ${(() => {
                                             if (progress[tech.id]) {
-                                                if (progress[tech.id][t.name]) {
+                                                if (progress[tech.id][topic.name]) {
                                                     return `checked="checked`;
                                                 }
                                             }
