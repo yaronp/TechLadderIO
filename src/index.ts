@@ -165,7 +165,7 @@ async function renderContent(props: Props, tech: Technology) {
                                 switch (level) {
                                     case "novice":
                                         return "NOVICE";
-                                    case "advanced beginner":
+                                    case "advanced_beginner":
                                         return "ADVANCED BEGINNER";
                                     case "competent":
                                         return "COMPETENT";
