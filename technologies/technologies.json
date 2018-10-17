@@ -13,7 +13,7 @@
     },
     {
         "id": "javascript",
-        "isVisible": true,
+        "isVisible": false,
         "displayName": "JavaScript",
         "description": "JavaScript is a scripting language created by Brendan Eich in Netscape Communications Corporation. It let's you introduce complex features to the website like animations, save user info, set timers,etc."
     },
