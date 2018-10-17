@@ -12,6 +12,12 @@
         "description": "Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern and based on Symfony."
     },
     {
+        "id": "javascript",
+        "isVisible": false,
+        "displayName": "JavaScript",
+        "description": "JavaScript is a scripting language created by Brendan Eich in Netscape Communications Corporation. It let's you introduce complex features to the website like animations, save user info, set timers,etc."
+    },
+    {
         "id": "nodejs",
         "isVisible": false,
         "displayName": "Node.js",
