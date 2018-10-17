@@ -295,7 +295,10 @@ function renderHome(technologies: Technology[]) {
                 return `
                     <tr class="topic">
                         <td>
-                            <a href="/?tech=${t.id}">
+                            <a
+                                class="internal_link"
+                                href="/?tech=${t.id}"
+                            >
                                 <b>
                                     ${t.displayName}
                                 </b>
@@ -306,6 +309,7 @@ function renderHome(technologies: Technology[]) {
                         </td>
                         <td>
                             <a
+                                class="internal_link"
                                 href="/?tech=${t.id}"
                                 data-toggle="tooltip"
                                 data-placement="left"
@@ -343,39 +347,93 @@ function mount(selector: string, html: string, done?: Function) {
     }
 }
 
-(async () => {
+function addEventListeners() {
+    $("a").tooltip();
+    $(".internal_link").on("click", (e) => {
+        e.preventDefault();
+        const currentTarget = $(e.currentTarget);
+        const href = currentTarget.attr("href");
+        history.pushState({}, document.title, href);
+    });
+    $(".completed_checkbox").on("change", (e) => {
+        (async () => {
+            const currentTarget = $(e.currentTarget);
+            const data = currentTarget.data();
+            const isChecked = currentTarget.is(":checked");
+            await setProgress(data.lang, data.topic, isChecked);
+        })();
+    });
+}
+
+function removeEventListeners() {
+    $(".internal_link").off("click");
+    $(".completed_checkbox").off("change");
+}
+
+async function initRouter() {
+    
     const root = "#main";
-    try {
-        const techId = getTech();
-        const technologies = await fetchTechnologies();
-        let html = "";
 
-        if (techId === undefined) {
-            html = renderHome(technologies);
-        } else if (technologies.find(t => t.id === techId) === undefined) {
-            html = `
-                Sorry page not found!
-            `;
-        } else {
-            const data = await fetchData(techId!);
-            const tech = technologies.find(t => t.id === techId);
-            html = await renderContent(data, tech!);
-        }
+    // Fetch list of technologies
+    const technologies = await fetchTechnologies();
+
+    const navigate = async () => {
+        try {
+
+            // Remove event listeners
+            removeEventListeners();
+    
+            // Get tech ID from URL
+            const techId = getTech();
+    
+            
+            let html = "";
+            
+            if (techId === undefined) {
+    
+                // Render home if no tech ID in URL
+                html = renderHome(technologies);
+    
+            
+            } else {
+                
+                if (technologies.find(t => t.id === techId) === undefined) {
+    
+                    // Render not found if invalid tech ID in URL
+                    html = `Sorry page not found!`;
         
-        mount(root, html, () => {
-            $("a").tooltip();
-            $(".completed_checkbox").on("change", (e) => {
-                (async () => {
-                    const target = $(e.target);
-                    const data = $(e.target).data();
-                    const isChecked = target.is(":checked");
-                    await setProgress(data.lang, data.topic, isChecked);
-                })();
-            });
-        });
+                } else {
+        
+                    // Render ladder if valid tech ID in URL
+                    const data = await fetchData(techId!);
+                    const tech = technologies.find(t => t.id === techId);
+                    html = await renderContent(data, tech!);
+        
+                }
+            }
+    
+            // Append HTML to DOM and add event listeners
+            mount(root, html, () => addEventListeners());
+    
+        } catch(e) {
+            const html = renderError(e.message);
+            mount(root, html);
+        }
+    };
 
-    } catch(e) {
-        const html = renderError(e.message);
-        mount(root, html);
-    }
+    const _pushState = window.history.pushState;
+
+    history.pushState = function() {
+        _pushState.apply(window.history, arguments);
+        (async () => {
+            await navigate();
+        })();
+    };
+    
+    return navigate;
+}
+
+(async () => {
+    const navigate = await initRouter();
+    await navigate();
 })();
