@@ -5,11 +5,12 @@
     "levels": {
         "novice": [
             {
-                "name": "Lorem ipsum",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "name": "A brief explanation on the history and how JavaScript works",
+                "description": "If you are interested in learning JavaScript you can read this resources to find out if it's right for you",
                 "resources": [
-                    "https://www.example.com",
-                    "https://www.example.com"
+                    "https://dev.to/thegamefreak720/a-brief-explanation-on-the-history-and-how-javascript-works-63h",
+                    "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
+                    "https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17"
                 ]
             }
         ],
