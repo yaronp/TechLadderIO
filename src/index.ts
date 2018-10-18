@@ -4,9 +4,8 @@ interface Topic {
     resources: string[];
 }
 
-interface Level {
-    name: string;
-    topics: Topic[];
+interface Levels {
+    [key: string]: Topic[];
 }
 
 interface Contributor {
@@ -16,7 +15,7 @@ interface Contributor {
 
 interface Props {
     theme: Theme,
-    levels: Level[];
+    levels: Levels;
     notes: string[];
     contributors: Contributor[];
 }
@@ -133,6 +132,7 @@ async function fetchData(tech: string): Promise<Props> {
 
 async function renderContent(props: Props, tech: Technology) {
     const progress = await getProgress();
+    const levels = Object.keys(props.levels);
     return `
         <style>
             h1 {
@@ -158,9 +158,26 @@ async function renderContent(props: Props, tech: Technology) {
         </h4>
         <table>
             ${
-                props.levels.map(l => `
+                levels.map(level => `
                     <tr class="level">
-                        <td colspan="4">${l.name}</td>
+                        <td colspan="4">
+                            ${(() => {
+                                switch (level) {
+                                    case "novice":
+                                        return "NOVICE";
+                                    case "advanced_beginner":
+                                        return "ADVANCED BEGINNER";
+                                    case "competent":
+                                        return "COMPETENT";
+                                    case "proficient":
+                                        return "PROFICIENT";
+                                    case "expert":
+                                        return "EXPERT";
+                                    default:
+                                        throw new Error(`Unknown level ${level}`);
+                                }
+                            })()}
+                        </td>
                     </tr>
                     <tr class="level-subtitle">
                         <td>CONCEPTS</td>
@@ -169,23 +186,23 @@ async function renderContent(props: Props, tech: Technology) {
                         <td>COMPLETED</td>
                     </tr>
                     ${
-                        l.topics.map((t, i) => `
-                            <tr class="topic ${i === l.topics.length -1 ? "last" : ""}">
+                        props.levels[level].map((topic, topicIndex) => `
+                            <tr class="topic ${topicIndex === level.length -1 ? "last" : ""}">
                                 <td>
-                                    ${t.name}
+                                    ${topic.name}
                                 </td>
                                 <td>
-                                    ${t.description}
+                                    ${topic.description}
                                 </td>
                                 <td>
                                     ${
-                                        t.resources.map(r => `
+                                        topic.resources.map(resource => `
                                             <a
-                                                href="${r}"
+                                                href="${resource}"
                                                 target="_blank"
                                                 data-toggle="tooltip"
                                                 data-placement="left"
-                                                title="${r}"
+                                                title="${resource}"
                                             >
                                                 <i class="material-icons">link</i>
                                             </a>
@@ -196,13 +213,13 @@ async function renderContent(props: Props, tech: Technology) {
                                     <input
                                         class="completed_checkbox"
                                         type="checkbox"
-                                        name="${tech.id}_${t.name}"
+                                        name="${tech.id}_${topic.name}"
                                         data-lang="${tech.id}"
-                                        data-topic="${t.name}"
+                                        data-topic="${topic.name}"
                                         value="true"
                                         ${(() => {
                                             if (progress[tech.id]) {
-                                                if (progress[tech.id][t.name]) {
+                                                if (progress[tech.id][topic.name]) {
                                                     return `checked="checked`;
                                                 }
                                             }
@@ -278,7 +295,10 @@ function renderHome(technologies: Technology[]) {
                 return `
                     <tr class="topic">
                         <td>
-                            <a href="/?tech=${t.id}">
+                            <a
+                                class="internal_link"
+                                href="/?tech=${t.id}"
+                            >
                                 <b>
                                     ${t.displayName}
                                 </b>
@@ -289,6 +309,7 @@ function renderHome(technologies: Technology[]) {
                         </td>
                         <td>
                             <a
+                                class="internal_link"
                                 href="/?tech=${t.id}"
                                 data-toggle="tooltip"
                                 data-placement="left"
@@ -326,39 +347,93 @@ function mount(selector: string, html: string, done?: Function) {
     }
 }
 
-(async () => {
+function addEventListeners() {
+    $("a").tooltip();
+    $(".internal_link").on("click", (e) => {
+        e.preventDefault();
+        const currentTarget = $(e.currentTarget);
+        const href = currentTarget.attr("href");
+        history.pushState({}, document.title, href);
+    });
+    $(".completed_checkbox").on("change", (e) => {
+        (async () => {
+            const currentTarget = $(e.currentTarget);
+            const data = currentTarget.data();
+            const isChecked = currentTarget.is(":checked");
+            await setProgress(data.lang, data.topic, isChecked);
+        })();
+    });
+}
+
+function removeEventListeners() {
+    $(".internal_link").off("click");
+    $(".completed_checkbox").off("change");
+}
+
+async function initRouter() {
+    
     const root = "#main";
-    try {
-        const techId = getTech();
-        const technologies = await fetchTechnologies();
-        let html = "";
 
-        if (techId === undefined) {
-            html = renderHome(technologies);
-        } else if (technologies.find(t => t.id === techId) === undefined) {
-            html = `
-                Sorry page not found!
-            `;
-        } else {
-            const data = await fetchData(techId!);
-            const tech = technologies.find(t => t.id === techId);
-            html = await renderContent(data, tech!);
-        }
+    // Fetch list of technologies
+    const technologies = await fetchTechnologies();
+
+    const navigate = async () => {
+        try {
+
+            // Remove event listeners
+            removeEventListeners();
+    
+            // Get tech ID from URL
+            const techId = getTech();
+    
+            
+            let html = "";
+            
+            if (techId === undefined) {
+    
+                // Render home if no tech ID in URL
+                html = renderHome(technologies);
+    
+            
+            } else {
+                
+                if (technologies.find(t => t.id === techId) === undefined) {
+    
+                    // Render not found if invalid tech ID in URL
+                    html = `Sorry page not found!`;
         
-        mount(root, html, () => {
-            $("a").tooltip();
-            $(".completed_checkbox").on("change", (e) => {
-                (async () => {
-                    const target = $(e.target);
-                    const data = $(e.target).data();
-                    const isChecked = target.is(":checked");
-                    await setProgress(data.lang, data.topic, isChecked);
-                })();
-            });
-        });
+                } else {
+        
+                    // Render ladder if valid tech ID in URL
+                    const data = await fetchData(techId!);
+                    const tech = technologies.find(t => t.id === techId);
+                    html = await renderContent(data, tech!);
+        
+                }
+            }
+    
+            // Append HTML to DOM and add event listeners
+            mount(root, html, () => addEventListeners());
+    
+        } catch(e) {
+            const html = renderError(e.message);
+            mount(root, html);
+        }
+    };
 
-    } catch(e) {
-        const html = renderError(e.message);
-        mount(root, html);
-    }
+    const _pushState = window.history.pushState;
+
+    history.pushState = function() {
+        _pushState.apply(window.history, arguments);
+        (async () => {
+            await navigate();
+        })();
+    };
+    
+    return navigate;
+}
+
+(async () => {
+    const navigate = await initRouter();
+    await navigate();
 })();

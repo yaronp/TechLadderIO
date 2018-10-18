@@ -1,0 +1,316 @@
+{
+    "theme": {
+        "primaryColor": "#fb503b"
+    },
+    "levels": {
+        "novice": [
+            {
+                "name": "Definition",
+                "description": "Learn what is Laravel and why it's useful.",
+                "resources": [
+                    "https://laravel.com/",
+                    "https://en.wikipedia.org/wiki/Laravel"
+                ]
+            },
+            {
+                "name": "Installation",
+                "description": "Set up Laravel from scratch.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/installation",
+                    "https://www.youtube.com/watch?v=EU7PRmCpx-0"
+                ]
+            },
+            {
+                "name": "Routes",
+                "description": "Learn what are routes and how to create them",
+                "resources": [
+                    "https://laravel.com/docs/5.7/routing",
+                    "https://laravel-news.com/laravel-route-tips-to-improve-your-routing"
+                ]
+            },
+            {
+                "name": "Controllers",
+                "description": "Learn how to set up controllers and use them with your routes.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/controllers",
+                    "https://www.tutorialspoint.com/laravel/laravel_controllers.htm"
+                ]
+            },
+            {
+                "name": "Requests",
+                "description": "Handle incoming requests and POST/GET parameters.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/requests"
+                ]
+            },
+            {
+                "name": "Responses",
+                "description": "Learn how to return responses and create redirects.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/responses"
+                ]
+            },
+            {
+                "name": "Views",
+                "description": "Learn how to handle views.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/views"
+                ]
+            }
+        ],
+        "advanced_beginner": [
+            {
+                "name": "Validation",
+                "description": "Validate data before processing it.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/validation",
+                    "https://medium.com/@kamerk22/the-smart-way-to-handle-request-validation-in-laravel-5e8886279271"
+                ]
+            },
+            {
+                "name": "Error handling",
+                "description": "Learn how to create sessions and store session data.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/errors",
+                    "https://code.tutsplus.com/tutorials/exception-handling-in-laravel--cms-30210"
+                ]
+            },
+            {
+                "name": "Blade templates",
+                "description": "Handle Laravel's template system.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/blade",
+                    "https://www.tutorialspoint.com/laravel/laravel_blade_templates.htm"
+                ]
+            },
+            {
+                "name": "CSRF protection",
+                "description": "Protect yourself from CSRF attacks.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/csrf",
+                    "https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)"
+                ]
+            },
+            {
+                "name": "URL generation",
+                "description": "Generate URLs and create signed URLs.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/urls"
+                ]
+            },
+            {
+                "name": "Sessions",
+                "description": "Learn how to create sessions and store session data.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/sessions"
+                ]
+            },
+            {
+                "name": "Logging",
+                "description": "Learn how to log useful information.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/logging"
+                ]
+            }
+        ],
+        "competent": [
+            {
+                "name": "Middleware",
+                "description": "Create and manage middlewares",
+                "resources": [
+                    "https://laravel.com/docs/5.7/middleware",
+                    "https://en.wikipedia.org/wiki/Middleware"
+                ]
+            },
+            {
+                "name": "Password reset",
+                "description": "Handle your password resets",
+                "resources": [
+                    "https://laravel.com/docs/5.7/passwords"
+                ]
+            },
+            {
+                "name": "Authorization",
+                "description": "Authorize your users",
+                "resources": [
+                    "https://laravel.com/docs/5.7/authorization"
+                ]
+            },
+            {
+                "name": "Cache",
+                "description": "Learn how to set up and use cache in Laravel",
+                "resources": [
+                    "https://laravel.com/docs/5.7/cache"
+                ]
+            },
+            {
+                "name": "File Storage",
+                "description": "Learn how to set up and use file storage in Laravel",
+                "resources": [
+                    "https://laravel.com/docs/5.7/filesystem"
+                ]
+            },
+            {
+                "name": "Helpers",
+                "description": "Use Laravel global functions to help you in anything",
+                "resources": [
+                    "https://laravel.com/docs/5.7/filesystem"
+                ]
+            },
+            {
+                "name": "Collections",
+                "description": "Learn how to manipulate data with collections",
+                "resources": [
+                    "https://laravel.com/docs/5.7/collections",
+                    "https://stackoverflow.com/questions/41466295/what-is-a-laravel-collection"
+                ]
+            }
+        ],
+        "proficient": [
+            {
+                "name": "Encryption",
+                "description": "Learn how to store or transfer data safely",
+                "resources": [
+                    "https://laravel.com/docs/5.7/encryption"
+                ]
+            },
+            {
+                "name": "Hashing",
+                "description": "Learn how to store or transfer data safely",
+                "resources": [
+                    "https://laravel.com/docs/5.7/hashing"
+                ]
+            },
+            {
+                "name": "Database",
+                "description": "Connect Laravel to a database to save data",
+                "resources": [
+                    "https://laravel.com/docs/5.7/database"
+                ]
+            },
+            {
+                "name": "Query Builder",
+                "description": "Perform database queries using Laravel's query builder",
+                "resources": [
+                    "https://laravel.com/docs/5.7/queries"
+                ]
+            },
+            {
+                "name": "Eloquent",
+                "description": "Create models to use your database more easily",
+                "resources": [
+                    "https://laravel.com/docs/5.7/eloquent"
+                ]
+            },
+            {
+                "name": "Mail",
+                "description": "Send mails to your users",
+                "resources": [
+                    "https://laravel.com/docs/5.7/mail"
+                ]
+            },
+            {
+                "name": "Notifications",
+                "description": "Notify your users via email, sms or slack.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/notifications"
+                ]
+            },
+            {
+                "name": "Events",
+                "description": "Add events and event listeners",
+                "resources": [
+                    "https://laravel.com/docs/5.7/events"
+                ]
+            },
+            {
+                "name": "Broadcasting",
+                "description": "Send out information in real time",
+                "resources": [
+                    "https://laravel.com/docs/5.7/broadcasting"
+                ]
+            },
+            {
+                "name": "Artisan console",
+                "description": "Learn how to use Laravel's artisan console to create commands and run them",
+                "resources": [
+                    "https://laravel.com/docs/5.7/queues"
+                ]
+            },
+            {
+                "name": "Queues",
+                "description": "Perform tasks one after the other",
+                "resources": [
+                    "https://laravel.com/docs/5.7/queues"
+                ]
+            },
+            {
+                "name": "Task scheduling",
+                "description": "Run tasks at a certain time",
+                "resources": [
+                    "https://laravel.com/docs/5.7/scheduling"
+                ]
+            },
+            {
+                "name": "API Authentication",
+                "description": "Create an API and allow others to authenticate",
+                "resources": [
+                    "https://laravel.com/docs/5.7/passport"
+                ]
+            }
+        ],
+        "expert": [
+            {
+                "name": "Pagination",
+                "description": "Paginate your API or front-end application",
+                "resources": [
+                    "https://laravel.com/docs/5.7/pagination"
+                ]
+            },
+            {
+                "name": "Migrations",
+                "description": "Create, modify or delete tables of your database.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/migrations"
+                ]
+            },
+            {
+                "name": "Seeds",
+                "description": "Fill your database with content generated by you. Useful to test it.",
+                "resources": [
+                    "https://laravel.com/docs/5.7/seeding"
+                ]
+            },
+            {
+                "name": "Relationships",
+                "description": "Create relationships between your models",
+                "resources": [
+                    "https://laravel.com/docs/5.7/eloquent-relationships"
+                ]
+            },
+            {
+                "name": "Mutators",
+                "description": "Create mutators and accessors for the data of your models",
+                "resources": [
+                    "https://laravel.com/docs/5.7/eloquent-relationships"
+                ]
+            },
+            {
+                "name": "Testing",
+                "description": "Create unit and integration tests",
+                "resources": [
+                    "https://laravel.com/docs/5.7/testing"
+                ]
+            }
+        ]
+    },
+    "notes": [
+        ""
+    ],
+    "contributors": [
+        {
+            "name": "Luis A. Martinez",
+            "contact": "https://twitter.com/Zerquix18"
+        }
+    ]
+}

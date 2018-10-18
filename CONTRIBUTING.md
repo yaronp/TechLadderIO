@@ -12,6 +12,20 @@ We are not looking for general purpose links. For example, someone could send a 
 
 If you need an example, you can refer to the [TypeScript ladder](http://www.techladder.io/?tech=typescript).
 
+### The ladder levels
+We would like all ladders to share the same levels:
+
+- Novice
+- Advanced beginner
+- Competent
+- Proficient
+- Expert
+
+### Theme
+The configuration allows us to change the primary color of a ladder. It is recommended to pick the primary color from the official logo of the selected technology.
+
+Adding additional levels or changing the levels names will throw and exception.
+
 ## Creating a new ladder
 
 To contribute you will need to fork the project on GitHub and send a PR once your changes are completed.
@@ -28,7 +42,53 @@ Let's imagine that we want to create a new ladder for Microsoft Azure.
 
 4. We then need to create a JSON file named `azure.json` under the same directory: `/technologies/azure/azure.json`. You can copy the contents of the JSON file from one of the existing ladders and change its contents later.
 
+Here is an example:
+
+```js
+{
+    "theme": {
+        "primaryColor": "#0089d6"
+    },
+    "levels": {
+        "novice": [
+            {
+                "name": "Lorem ipsum",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "resources": [
+                    "https://www.example.com",
+                    "https://www.example.com"
+                ]
+            }
+        ],
+        "advanced_beginner": [],
+        "competent": [],
+        "proficient": [],
+        "expert": []
+    },
+    "notes": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "contributors": [
+        {
+            "name": "Your Name",
+            "contact": "https://example.com/"
+        }
+    ]
+}
+```
+
 5. Finally, we need to add the ladder to the `/technologies/technologies.json` file. 
+
+```js
+[
+    {
+        "id": "azure",
+        "isVisible": false,
+        "displayName": "Azure",
+        "description": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through a global network of Microsoft-managed data centers."
+    }
+]
+```
 
 ## Compile and run the project
 
