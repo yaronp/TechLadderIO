@@ -154,7 +154,7 @@ async function renderContent(props: Props, tech: Technology) {
         </h1>
         <h4>
             The ${tech.displayName} progression ladder is a grouping of concepts and skills relevant to ${tech.displayName} programming.
-            It provides aspiring TypeScript programmers with a way to track and improve their ${tech.displayName} skills.
+            It provides aspiring ${tech.displayName} programmers with a way to track and improve their ${tech.displayName} skills.
         </h4>
         <table>
             ${

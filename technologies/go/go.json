@@ -5,26 +5,387 @@
     "levels": {
         "novice": [
             {
-                "name": "Lorem ipsum",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "name": "Line break rules",
+                "description": "Understand line break rules In Go such as semicolon insertion and comma separator rules",
                 "resources": [
-                    "https://www.example.com",
-                    "https://www.example.com"
+                    "https://go101.org/article/line-break-rules.html",
+                    "https://golang.org/doc/effective_go.html#semicolons"
+                ]
+            },
+            {
+                "name": "Variable rules",
+                "description": "Understand rules about unused variables and exceptions to each case",
+                "resources": [
+                    "https://golang.org/doc/effective_go.html#blank_unused",
+                    "https://npf.io/2014/03/unused-variables-in-go/"
+                ]
+            },
+            {
+                "name": "Import rules",
+                "description": "Rules about unused imports and exceptions to each case",
+                "resources": [
+                    "https://golang.org/doc/faq#unused_variables_and_imports",
+                    "https://npf.io/2014/03/unused-variables-in-go/"
+                ]
+            },
+            {
+                "name": "Type inference",
+                "description": "Understand what is type inference when declaring variables",
+                "resources": [
+                    "https://tour.golang.org/basics/14"
+                ]
+            },
+            {
+                "name": "Type assertions",
+                "description": "Understand what is type assertions and how to perform them",
+                "resources": [
+                    "https://tour.golang.org/methods/15",
+                    "https://medium.com/golangspec/type-assertions-in-go-e609759c42e1"
+                ]
+            },
+            {
+                "name": "Variable scopes",
+                "description": "Understanding how scopes work and what is variable shadowing",
+                "resources": [
+                    "https://medium.com/golangspec/scopes-in-go-a6042bb4298c",
+                    "https://www.tutorialspoint.com/go/go_scope_rules.htm",
+                    "https://rpeshkov.net/blog/golang-variable-shadowing/"
+                ]
+            },
+            {
+                "name": "The nil value",
+                "description": "Understanding how nil is handled in Go",
+                "resources": [
+                    "https://go101.org/article/nil.html",
+                    "https://www.gmarik.info/blog/2016/understanding-golang-nil-value/"
+                ]
+            },
+            {
+                "name": "Strings",
+                "description": "Understanding how strings are represented",
+                "resources": [
+                    "https://blog.golang.org/strings",
+                    "https://golangbot.com/strings/",
+                    "https://go101.org/article/string.html"
+                ]
+            },
+            {
+                "name": "Slices and Arrays",
+                "description": "Declare and work with Slices and Arrays",
+                "resources": [
+                    "https://blog.golang.org/go-slices-usage-and-internals",
+                    "https://dave.cheney.net/2018/07/12/slices-from-the-ground-up",
+                    "https://www.ardanlabs.com/blog/2013/08/understanding-slices-in-go-programming.html"
+                ]
+            },
+            {
+                "name": "Maps",
+                "description": "Declare and work with Maps",
+                "resources": [
+                    "https://blog.golang.org/go-maps-in-action",
+                    "https://www.callicoder.com/golang-maps/",
+                    "https://golangbot.com/maps/"
+                ]
+            },
+            {
+                "name": "Range loop",
+                "description": "Understanding how to loop using range in Go",
+                "resources": [
+                    "https://garbagecollected.org/2017/02/22/go-range-loop-internals/",
+                    "https://gobyexample.com/range",
+                    "https://github.com/golang/go/wiki/Range"
+                ]
+            },
+            {
+                "name": "Goroutines",
+                "description": "Learn what are Goroutines and how to use them",
+                "resources": [
+                    "https://golangbot.com/goroutines/",
+                    "https://www.golang-book.com/books/intro/10"
+                ]
+            },
+            {
+                "name": "Channels",
+                "description": "Define and use channels",
+                "resources": [
+                    "https://golangbot.com/channels/",
+                    "https://www.sohamkamani.com/blog/2017/08/24/golang-channels-explained/",
+                    "https://go101.org/article/channel.html"
+                ]
+            },
+            {
+                "name": "Structs",
+                "description": "Understand what are structs and how to define them",
+                "resources": [
+                    "https://www.golang-book.com/books/intro/9",
+                    "https://golangbot.com/structs/",
+                    "http://www.golangprograms.com/go-language/struct.html"
+                ]
+            },
+            {
+                "name": "Interfaces",
+                "description": "Learn how to use interfaces",
+                "resources": [
+                    "https://medium.com/golangspec/interfaces-in-go-part-i-4ae53a97479c",
+                    "https://www.calhoun.io/how-do-interfaces-work-in-go/",
+                    "https://golangbot.com/interfaces-part-1/"
+                ]
+            },
+            {
+                "name": "Methods",
+                "description": "Define and use methods",
+                "resources": [
+                    "https://golangbot.com/methods/",
+                    "https://medium.com/golangspec/methods-in-go-part-i-a4e575dff860",
+                    "http://www.golangprograms.com/golang/methods-interfaces-objects/"
+                ]
+            },
+            {
+                "name": "Errors",
+                "description": "Understand what are errors and how to do error handling",
+                "resources": [
+                    "https://blog.golang.org/error-handling-and-go",
+                    "https://medium.com/@hussachai/error-handling-in-go-a-quick-opinionated-guide-9199dd7c7f76",
+                    "https://golangbot.com/error-handling/"
+                ]
+            },
+            {
+                "name": "Deferred calls",
+                "description": "Learn what Defer does and how to use",
+                "resources": [
+                    "https://golangbot.com/defer/",
+                    "https://blog.learngoprogramming.com/gotchas-of-defer-in-go-1-8d070894cb01",
+                    "https://go101.org/article/defer-more.html"
+                ]
+            },
+            {
+                "name": "Exported/Unexported identifiers",
+                "description": "Understand how to export or hide identifiers",
+                "resources": [
+                    "https://www.ardanlabs.com/blog/2014/03/exportedunexported-identifiers-in-go.html",
+                    "https://medium.com/golangspec/exported-identifiers-in-go-518e93cc98af"
                 ]
             }
         ],
-        "advanced_beginner": [],
-        "competent": [],
-        "proficient": [],
-        "expert": []
+        "advanced_beginner": [
+            {
+                "name": "Underlying types",
+                "description": "Understand underlying types and type identity rules",
+                "resources": [
+                    "https://golang.org/ref/spec#Type_identity",
+                    "https://go101.org/article/type-system-overview.html"
+                ]
+            },
+            {
+                "name": "Type Embedding",
+                "description": "Understand and use Type Embedding",
+                "resources": [
+                    "https://travix.io/type-embedding-in-go-ba40dd4264df",
+                    "https://go101.org/article/type-embedding.html",
+                    "http://www.hydrogen18.com/blog/golang-embedding.html"
+                ]
+            },
+            {
+                "name": "Panic and Recover",
+                "description": "Understand the mechanics of Panic and Recover",
+                "resources": [
+                    "https://blog.golang.org/defer-panic-and-recover",
+                    "https://golangbot.com/panic-and-recover/",
+                    "https://go101.org/article/panic-and-recover-use-cases.html"
+                ]
+            },
+            {
+                "name": "Reflection",
+                "description": "Understand and use Reflection",
+                "resources": [
+                    "https://blog.golang.org/laws-of-reflection",
+                    "https://golangbot.com/reflection/",
+                    "https://go101.org/article/reflection.html"
+                ]
+            },
+            {
+                "name": "Pointers",
+                "description": "Use pointers effectively",
+                "resources": [
+                    "https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back",
+                    "https://www.callicoder.com/golang-pointers/",
+                    "https://golangbot.com/pointers/"
+                ]
+            },
+            {
+                "name": "Concurrency Synchronization Techniques",
+                "description": "How to utilize concurrency in Go",
+                "resources": [
+                    "https://go101.org/article/concurrent-synchronization-more.html",
+                    "https://notes.shichao.io/gopl/ch9/",
+                    "http://www.golangbootcamp.com/book/concurrency"
+                ]
+            },
+            {
+                "name": "Atomic Operations",
+                "description": "Use atomic variables and operations",
+                "resources": [
+                    "https://gobyexample.com/atomic-counters",
+                    "https://go101.org/article/concurrent-atomic-operation.html"
+                ]
+            },
+            {
+                "name": "Race conditions and deadlocks",
+                "description": "Detecting and fixing race conditions and deadlocks",
+                "resources": [
+                    "https://lincolnloop.com/blog/lesson-learned-while-debugging-botbotme/",
+                    "https://golang.org/doc/articles/race_detector.html",
+                    "https://www.ardanlabs.com/blog/2013/09/detecting-race-conditions-with-go.html"
+                ]
+            },
+            {
+                "name": "Pointer vs value receivers",
+                "description": "Understand pointer vs value receivers in types",
+                "resources": [
+                    "https://www.phizzle.space/golang/2017/01/27/go-pointer-receivers-vs-value-receivers.html",
+                    "http://joshua.poehls.me/2014/04/go-101-methods-on-pointers-vs-values/",
+                    "https://go101.org/article/method.html"
+                ]
+            },
+            {
+                "name": "JSON/GOB encoding",
+                "description": "Use JSON and gob encoding",
+                "resources": [
+                    "https://blog.golang.org/json-and-go",
+                    "https://blog.gopheracademy.com/advent-2016/advanced-encoding-decoding/",
+                    "https://www.linkedin.com/pulse/golang-serialize-struct-using-gob-part-1-ketan-parmar-ph-d-/"
+                ]
+            }
+        ],
+        "competent": [
+            {
+                "name": "Unsafe types",
+                "description": "Working around the type system with types.Unsafe",
+                "resources": [
+                    "https://go101.org/article/unsafe.html",
+                    "https://medium.com/@utter_babbage/breaking-the-type-system-in-golang-aka-dynamic-types-8b86c35d897b",
+                    "https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/"
+                ]
+            },
+            {
+                "name": "Bounds check elimination",
+                "description": "Understand what is bound check elimination and how to use it",
+                "resources": [
+                    "https://www.ardanlabs.com/blog/2018/04/bounds-check-elimination-in-go.html",
+                    "https://go101.org/article/bounds-check-elimination.html"
+                ]
+            },
+            {
+                "name": "Value comparison and assignment rules",
+                "description": "",
+                "resources": [
+                ]
+            },
+            {
+                "name": "Go Memory Model",
+                "description": "Understand more about the memory model",
+                "resources": [
+                    "https://go101.org/article/memory-model.html",
+                    "https://golang.org/ref/mem"
+                ]
+            },
+            {
+                "name": "Type Alignment and Type Value Sizes",
+                "description": "Understand the inner layout of memory and alignment guarantees",
+                "resources": [
+                    "https://syslog.ravelin.com/go-and-memory-layout-6ef30c730d51",
+                    "https://dave.cheney.net/2015/10/09/padding-is-hard",
+                    "https://go101.org/article/memory-layout.html"
+                ]
+            },
+            {
+                "name": "Goto statements",
+                "description": "Use goto and label statements",
+                "resources": [
+                    "https://medium.com/golangspec/labels-in-go-4ffd81932339",
+                    "https://relistan.com/continue-statement-with-labels-in-go"
+                ]
+            }
+        ],
+        "proficient": [
+            {
+                "name": "Profiling Go programs",
+                "description": "Understand how to profile Go programs for performance",
+                "resources": [
+                    "https://blog.golang.org/profiling-go-programs",
+                    "https://jvns.ca/blog/2017/09/24/profiling-go-with-pprof/",
+                    "https://www.integralist.co.uk/posts/profiling-go/"
+                ]
+            },
+            {
+                "name": "Cgo",
+                "description": "How to bridge C with Go",
+                "resources": [
+                    "https://golang.org/cmd/cgo/",
+                    "https://dave.cheney.net/tag/cgo",
+                    "https://www.programming-books.io/essential/go/8d79b5922813415eb476b895ef16a469-wire-c-and-go-code-in-all-directions"
+                ]
+            },
+            {
+                "name": "Escape analysis",
+                "description": "What is escape analysis and how can you utilize it",
+                "resources": [
+                    "https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-escape-analysis.html",
+                    "https://www.ardanlabs.com/blog/2018/01/escape-analysis-flaws.html",
+                    "http://www.agardner.me/golang/garbage/collection/gc/escape/analysis/2015/10/18/go-escape-analysis.html"
+                ]
+            },
+            {
+                "name": "System Calls",
+                "description": "Execute System Calls",
+                "resources": [
+                    "https://groob.io/posts/golang-execve/",
+                    "https://blog.gopheracademy.com/advent-2017/unsafe-pointer-and-system-calls/"
+                ]
+            }
+        ],
+        "expert": [
+            {
+                "name": "Go Assembly",
+                "description": "Understand the How Go compiles to Assembly",
+                "resources": [
+                    "https://golang.org/doc/asm",
+                    "https://blog.sgmansfield.com/2017/04/a-foray-into-go-assembly-programming/",
+                    "https://github.com/teh-cmc/go-internals/blob/master/chapter1_assembly_primer/README.md"
+                ]
+            },
+            {
+                "name": "Channel structure",
+                "description": "Understand the internal structure of Channels",
+                "resources": [
+                    "http://dmitryvorobev.blogspot.com/2016/08/golang-channels-implementation.html",
+                    "https://codeburst.io/diving-deep-into-the-golang-channels-549fd4ed21a8"
+                ]
+            },
+            {
+                "name": "Garbage collector",
+                "description": "Learn more about the Garbage Collector",
+                "resources": [
+                    "https://blog.golang.org/ismmkeynote"
+                ]
+            },
+            {
+                "name": "Go modules",
+                "description": "Learn about Go modules",
+                "resources": [
+                    "https://github.com/golang/go/wiki/Modules",
+                    "https://dave.cheney.net/2018/07/14/taking-go-modules-for-a-spin"
+                ]
+            }
+        ]
     },
     "notes": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "This is a community-driven document, please share your feedback, help us to improve it. Please open an issue or send us a PR on Github!"
     ],
     "contributors": [
         {
-            "name": "Your Name",
-            "contact": "https://example.com/"
+            "name": "Theo Despoudis",
+            "contact": "https://twitter.com/nerdokto"
         }
     ]
 }
