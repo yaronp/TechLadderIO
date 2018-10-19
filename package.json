@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "minimize": "./node_modules/uglify-js/bin/uglifyjs ./dist/index.js -c -m -o ./dist/index.min.js",
+    "serve": "./node_modules/http-server/bin/http-server",
+    "start": "npm run build && npm run minimize && npm run serve"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/bootstrap": "4.1.2",
-    "@types/jquery": "3.3.17",
-    "typescript": "3.1.1"
-  }
+    "http-server": "0.11.1",
+    "typescript": "3.1.1",
+    "uglify-js": "3.4.9"
+  },
+  "dependencies": {}
 }

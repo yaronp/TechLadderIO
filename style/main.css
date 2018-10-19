@@ -38,7 +38,6 @@ h4 {
 table {
     background-color: #f3f3f3;
     margin: auto;
-    max-width: 80%;
 }
 
 table, tr, td {
@@ -87,15 +86,12 @@ table, tr, td {
 }
 
 .note {
-    width: 60%;
-    margin: auto;
     margin-top: 30px;
 }
 
 .promo {
-    width: 60%;
-    margin: auto;
     padding-top: 100px;
+    width: 100%;
 }
 
 .promo img {
@@ -108,4 +104,15 @@ table, tr, td {
 
 a:hover {
     text-decoration: none;
+}
+
+.nav {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.nav a {
+    width: 130px;
+    margin-right: 5px;
 }
