@@ -41,6 +41,13 @@
                 ]
             },
             {
+                "name": "If/Else statements",
+                "description": "",
+                "resources": [
+                   
+                ]
+            },
+            {
                 "name": "Objects",
                 "description": "Objects is an amazing thing we can use to set properties for a lot of different things that these articles will touch on",
                 "resources": [
@@ -48,8 +55,65 @@
 		            "https://javascript.info/object"	
                 ]
             },
+            {
+                "name": "For Loop",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "The importance of console.log",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            }
         ],
-        "advanced_beginner": [],
+        "advanced_beginner": [
+            {
+                "name": "Differences between var, let and const",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Mutating arrays declared with the const keyword",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Arrow functions",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "The spread operator",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Template Literals",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Import a default export",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            }
+        ],
         "competent": [],
         "proficient": [],
         "expert": []
