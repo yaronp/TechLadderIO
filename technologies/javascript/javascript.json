@@ -21,7 +21,16 @@
                     "https://scotch.io/courses/10-need-to-know-javascript-concepts/declaring-javascript-variables-var-let-and-const",
                     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"	
                 ]
-            }
+            },
+            {
+                "name": "Arrays",
+                "description": "Using arrays you can store multiple values in this container making it useful for making lists and much more.",
+                "resources": [
+               	   "https://javascript.info/array",
+                   "https://tech.io/playgrounds/6181/javascript-arrays---tips-tricks-and-examples",
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                ]
+            },
         ],
         "advanced_beginner": [],
         "competent": [],
