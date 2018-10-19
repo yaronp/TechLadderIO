@@ -31,6 +31,15 @@
                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
                 ]
             },
+            {
+                "name": "Functions",
+                "description": "A fundamental in your learning of JavaScript. Learning how to use functions will give you a great understanding on how JavaScript works",
+                "resources": [
+                   "https://javascript.info/function-basics",
+                   "https://www.tutorialspoint.com/javascript/javascript_functions.htm",
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+                ]
+            },
         ],
         "advanced_beginner": [],
         "competent": [],
