@@ -118,7 +118,10 @@
         "proficient": [],
         "expert": []
     },
-    "notes": [],
+    "notes": [
+        "I recommend as you go along each module you go to http://jsbin.com and play around with the examples the articles show and try different things. This will help you get a better grasp of the language",
+        "https://jsfiddle.net/cmckeachie/7yedj776/"
+    ],
     "contributors": [
         {
             "name": "Luis Alvarez",
