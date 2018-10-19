@@ -12,6 +12,15 @@
                     "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
                     "https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17"
                 ]
+            },
+            {
+                "name": "What are variables?",
+                "description": "Variables are very important inside JavaScript because they let us store data in them. It can be numbers, words, list and operations that we want our program to run. Let's explore this concept.",
+                "resources": [
+                    "https://www.tutorialspoint.com/javascript/javascript_variables.htm",
+                    "https://scotch.io/courses/10-need-to-know-javascript-concepts/declaring-javascript-variables-var-let-and-const",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"	
+                ]
             }
         ],
         "advanced_beginner": [],
