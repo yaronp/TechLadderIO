@@ -73,7 +73,7 @@
     },
     {
         "id": "go",
-        "isVisible": false,
+        "isVisible": true,
         "displayName": "Go",
         "description": "Go is a programming language designed by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson. Go is a statically typed, compiled language in the tradition of C, with the added benefits of memory safety, garbage collection, structural typing, and CSP-style concurrency."
     },

@@ -172,7 +172,7 @@ function renderContent(props, tech) {
                 case 1:
                     progress = _a.sent();
                     levels = Object.keys(props.levels);
-                    return [2 /*return*/, "\n        <style>\n            h1 {\n                color: " + props.theme.primaryColor + ";\n            }\n\n            a {\n                color: " + props.theme.primaryColor + ";\n            }\n\n            .level {\n                background-color: " + props.theme.primaryColor + ";\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./technologies/" + tech.id + "/" + tech.id + ".png\" />\n        <h1>\n            " + tech.displayName + " Progression Ladder\n        </h1>\n        <h4>\n            The " + tech.displayName + " progression ladder is a grouping of concepts and skills relevant to " + tech.displayName + " programming.\n            It provides aspiring TypeScript programmers with a way to track and improve their " + tech.displayName + " skills.\n        </h4>\n        <table>\n            " + levels.map(function (level) { return "\n                    <tr class=\"level\">\n                        <td colspan=\"4\">\n                            " + (function () {
+                    return [2 /*return*/, "\n        <style>\n            h1 {\n                color: " + props.theme.primaryColor + ";\n            }\n\n            a {\n                color: " + props.theme.primaryColor + ";\n            }\n\n            .level {\n                background-color: " + props.theme.primaryColor + ";\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./technologies/" + tech.id + "/" + tech.id + ".png\" />\n        <h1>\n            " + tech.displayName + " Progression Ladder\n        </h1>\n        <h4>\n            The " + tech.displayName + " progression ladder is a grouping of concepts and skills relevant to " + tech.displayName + " programming.\n            It provides aspiring " + tech.displayName + " programmers with a way to track and improve their " + tech.displayName + " skills.\n        </h4>\n        <table>\n            " + levels.map(function (level) { return "\n                    <tr class=\"level\">\n                        <td colspan=\"4\">\n                            " + (function () {
                             switch (level) {
                                 case "novice":
                                     return "NOVICE";
@@ -212,7 +212,7 @@ function renderHome(technologies) {
     technologies = technologies.sort(function (a, b) { return a.displayName.localeCompare(b.displayName); })
         .filter(function (t) { return t.isVisible; });
     return "\n        <style>\n            h1 {\n                color: #f7a80d;\n            }\n\n            a {\n                color: #f7a80d;\n            }\n\n            .level {\n                background-color: #f7a80d;\n                color: #ffffff;\n            }\n        </style>\n        <img class=\"logo\" src=\"./assets/logo.png\" />\n        <h1>Tech Ladder IO</h1>\n        <h4>\n            A community-driven grouping of concepts and skills relevant to different technologies\n            that provides aspiring programmers with a way to track and improve their skills.\n        </h4>\n        <table>\n            <tr class=\"level\">\n                <td>Technology</td>\n                <td>Description</td>\n                <td>Ladder</td>\n            </tr>\n            " + technologies.map(function (t) {
-        return "\n                    <tr class=\"topic\">\n                        <td>\n                            <a href=\"/?tech=" + t.id + "\">\n                                <b>\n                                    " + t.displayName + "\n                                </b>\n                            </a>\n                        </td>\n                        <td>\n                            " + t.description + "\n                        </td>\n                        <td>\n                            <a\n                                href=\"/?tech=" + t.id + "\"\n                                data-toggle=\"tooltip\"\n                                data-placement=\"left\"\n                                title=\"" + t.displayName + "\"\n                            >\n                                <i class=\"material-icons\">link</i>\n                            </a>\n                        </td>\n                    </tr>\n                ";
+        return "\n                    <tr class=\"topic\">\n                        <td>\n                            <a\n                                class=\"internal_link\"\n                                href=\"/?tech=" + t.id + "\"\n                            >\n                                <b>\n                                    " + t.displayName + "\n                                </b>\n                            </a>\n                        </td>\n                        <td>\n                            " + t.description + "\n                        </td>\n                        <td>\n                            <a\n                                class=\"internal_link\"\n                                href=\"/?tech=" + t.id + "\"\n                                data-toggle=\"tooltip\"\n                                data-placement=\"left\"\n                                title=\"" + t.displayName + "\"\n                            >\n                                <i class=\"material-icons\">link</i>\n                            </a>\n                        </td>\n                    </tr>\n                ";
     }).join("") + "\n        <table>\n        <div class=\"promo\">\n            <h1>We need your help!</h1>\n            <p>\n                This is a community-driven project, please share your feedback and\n                help us to improve it.<br>\n                Please open an issue or send us a PR on <a href=\"https://github.com/remojansen/TechLadderIO\">GitHub</a>!\n            </p>\n        </div>\n    ";
 }
 function renderError(e) {
@@ -227,64 +227,119 @@ function mount(selector, html, done) {
         }
     }
 }
-(function () { return __awaiter(_this, void 0, void 0, function () {
-    var root, techId_1, technologies, html, data, tech, e_1, html;
+function addEventListeners() {
     var _this = this;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                root = "#main";
-                _a.label = 1;
-            case 1:
-                _a.trys.push([1, 8, , 9]);
-                techId_1 = getTech();
-                return [4 /*yield*/, fetchTechnologies()];
-            case 2:
-                technologies = _a.sent();
-                html = "";
-                if (!(techId_1 === undefined)) return [3 /*break*/, 3];
-                html = renderHome(technologies);
-                return [3 /*break*/, 7];
-            case 3:
-                if (!(technologies.find(function (t) { return t.id === techId_1; }) === undefined)) return [3 /*break*/, 4];
-                html = "\n                Sorry page not found!\n            ";
-                return [3 /*break*/, 7];
-            case 4: return [4 /*yield*/, fetchData(techId_1)];
-            case 5:
-                data = _a.sent();
-                tech = technologies.find(function (t) { return t.id === techId_1; });
-                return [4 /*yield*/, renderContent(data, tech)];
-            case 6:
-                html = _a.sent();
-                _a.label = 7;
-            case 7:
-                mount(root, html, function () {
-                    $("a").tooltip();
-                    $(".completed_checkbox").on("change", function (e) {
+    $("a").tooltip();
+    $(".internal_link").on("click", function (e) {
+        e.preventDefault();
+        var currentTarget = $(e.currentTarget);
+        var href = currentTarget.attr("href");
+        history.pushState({}, document.title, href);
+    });
+    $(".completed_checkbox").on("change", function (e) {
+        (function () { return __awaiter(_this, void 0, void 0, function () {
+            var currentTarget, data, isChecked;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        currentTarget = $(e.currentTarget);
+                        data = currentTarget.data();
+                        isChecked = currentTarget.is(":checked");
+                        return [4 /*yield*/, setProgress(data.lang, data.topic, isChecked)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        }); })();
+    });
+}
+function removeEventListeners() {
+    $(".internal_link").off("click");
+    $(".completed_checkbox").off("change");
+}
+function initRouter() {
+    return __awaiter(this, void 0, void 0, function () {
+        var root, technologies, navigate, _pushState;
+        var _this = this;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    root = "#main";
+                    return [4 /*yield*/, fetchTechnologies()];
+                case 1:
+                    technologies = _a.sent();
+                    navigate = function () { return __awaiter(_this, void 0, void 0, function () {
+                        var techId_1, html, data, tech, e_1, html;
+                        return __generator(this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    _a.trys.push([0, 6, , 7]);
+                                    // Remove event listeners
+                                    removeEventListeners();
+                                    techId_1 = getTech();
+                                    html = "";
+                                    if (!(techId_1 === undefined)) return [3 /*break*/, 1];
+                                    // Render home if no tech ID in URL
+                                    html = renderHome(technologies);
+                                    return [3 /*break*/, 5];
+                                case 1:
+                                    if (!(technologies.find(function (t) { return t.id === techId_1; }) === undefined)) return [3 /*break*/, 2];
+                                    // Render not found if invalid tech ID in URL
+                                    html = "Sorry page not found!";
+                                    return [3 /*break*/, 5];
+                                case 2: return [4 /*yield*/, fetchData(techId_1)];
+                                case 3:
+                                    data = _a.sent();
+                                    tech = technologies.find(function (t) { return t.id === techId_1; });
+                                    return [4 /*yield*/, renderContent(data, tech)];
+                                case 4:
+                                    html = _a.sent();
+                                    _a.label = 5;
+                                case 5:
+                                    // Append HTML to DOM and add event listeners
+                                    mount(root, html, function () { return addEventListeners(); });
+                                    return [3 /*break*/, 7];
+                                case 6:
+                                    e_1 = _a.sent();
+                                    html = renderError(e_1.message);
+                                    mount(root, html);
+                                    return [3 /*break*/, 7];
+                                case 7: return [2 /*return*/];
+                            }
+                        });
+                    }); };
+                    _pushState = window.history.pushState;
+                    history.pushState = function () {
+                        var _this = this;
+                        _pushState.apply(window.history, arguments);
                         (function () { return __awaiter(_this, void 0, void 0, function () {
-                            var target, data, isChecked;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
-                                    case 0:
-                                        target = $(e.target);
-                                        data = $(e.target).data();
-                                        isChecked = target.is(":checked");
-                                        return [4 /*yield*/, setProgress(data.lang, data.topic, isChecked)];
+                                    case 0: return [4 /*yield*/, navigate()];
                                     case 1:
                                         _a.sent();
                                         return [2 /*return*/];
                                 }
                             });
                         }); })();
-                    });
-                });
-                return [3 /*break*/, 9];
-            case 8:
-                e_1 = _a.sent();
-                html = renderError(e_1.message);
-                mount(root, html);
-                return [3 /*break*/, 9];
-            case 9: return [2 /*return*/];
+                    };
+                    return [2 /*return*/, navigate];
+            }
+        });
+    });
+}
+(function () { return __awaiter(_this, void 0, void 0, function () {
+    var navigate;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, initRouter()];
+            case 1:
+                navigate = _a.sent();
+                return [4 /*yield*/, navigate()];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
         }
     });
 }); })();
