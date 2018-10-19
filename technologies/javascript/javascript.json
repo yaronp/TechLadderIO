@@ -12,14 +12,115 @@
                     "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
                     "https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17"
                 ]
+            },
+            {
+                "name": "What are variables?",
+                "description": "Variables are very important inside JavaScript because they let us store data in them. It can be numbers, words, list and operations that we want our program to run. Let's explore this concept.",
+                "resources": [
+                    "https://www.tutorialspoint.com/javascript/javascript_variables.htm",
+                    "https://scotch.io/courses/10-need-to-know-javascript-concepts/declaring-javascript-variables-var-let-and-const",
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"	
+                ]
+            },
+            {
+                "name": "Arrays",
+                "description": "Using arrays you can store multiple values in this container making it useful for making lists and much more.",
+                "resources": [
+               	   "https://javascript.info/array",
+                   "https://tech.io/playgrounds/6181/javascript-arrays---tips-tricks-and-examples",
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                ]
+            },
+            {
+                "name": "Functions",
+                "description": "A fundamental in your learning of JavaScript. Learning how to use functions will give you a great understanding on how JavaScript works",
+                "resources": [
+                   "https://javascript.info/function-basics",
+                   "https://www.tutorialspoint.com/javascript/javascript_functions.htm",
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+                ]
+            },
+            {
+                "name": "If/Else statements",
+                "description": "",
+                "resources": [
+                   
+                ]
+            },
+            {
+                "name": "Objects",
+                "description": "Objects is an amazing thing we can use to set properties for a lot of different things that these articles will touch on",
+                "resources": [
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects",
+		            "https://javascript.info/object"	
+                ]
+            },
+            {
+                "name": "For Loop",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "The importance of console.log",
+                "description": "",
+                "resources": [
+                   	
+                ]
             }
         ],
-        "advanced_beginner": [],
+        "advanced_beginner": [
+            {
+                "name": "Differences between var, let and const",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Mutating arrays declared with the const keyword",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Arrow functions",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "The spread operator",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Template Literals",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            },
+            {
+                "name": "Import a default export",
+                "description": "",
+                "resources": [
+                   	
+                ]
+            }
+        ],
         "competent": [],
         "proficient": [],
         "expert": []
     },
-    "notes": [],
+    "notes": [
+        "I recommend as you go along each module you go to http://jsbin.com and play around with the examples the articles show and try different things. This will help you get a better grasp of the language"
+    ],
     "contributors": [
         {
             "name": "Luis Alvarez",
