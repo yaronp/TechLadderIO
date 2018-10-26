@@ -112,9 +112,11 @@
             },
             {
                 "name": "Import a default export",
-                "description": "",
+                "description": "In React land this is highly use but it's not something that React provides us. Let's look at this concept that you will use a lot with different technologies.",
                 "resources": [
-                   	
+		   "https://www.kaplankomputing.com/blog/tutorials/javascript/understanding-imports-exports-es6/",	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import",
+		   "https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export"	
                 ]
             }
         ],
