@@ -79,16 +79,11 @@
         "advanced_beginner": [
             {
                 "name": "Differences between var, let and const",
-                "description": "",
+                "description": "As our code becomes more complicated is good to have scope on our variables so we don't mutate variables we don't want to be changed and define those we do.",
                 "resources": [
-                   	
-                ]
-            },
-            {
-                "name": "Mutating arrays declared with the const keyword",
-                "description": "",
-                "resources": [
-                   	
+                   "https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e",
+		   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let",
+		   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"	
                 ]
             },
             {
