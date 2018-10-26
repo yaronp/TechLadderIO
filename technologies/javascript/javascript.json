@@ -60,9 +60,11 @@
             },
             {
                 "name": "For Loop",
-                "description": "",
+                "description": "For loops are a cool way to iterate a set ammounts of times to do something repeatedly.",
                 "resources": [
-                   	
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+		    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for",
+		    "https://www.tutorialspoint.com/javascript/javascript_for_loop.htm"	
                 ]
             },
             {
