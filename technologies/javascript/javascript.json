@@ -96,9 +96,10 @@
             },
             {
                 "name": "The spread operator",
-                "description": "",
+                "description": "This is a simple way to iterate through an array and use the key values",
                 "resources": [
-                   	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+		   "https://zendev.com/2018/05/09/understanding-spread-operator-in-javascript.html"	
                 ]
             },
             {
