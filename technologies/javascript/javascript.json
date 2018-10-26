@@ -88,9 +88,10 @@
             },
             {
                 "name": "Arrow functions",
-                "description": "",
+                "description": "It's a shorter way to make functions and it's highly used today",
                 "resources": [
-                   	
+		   "https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/",	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"	
                 ]
             },
             {
