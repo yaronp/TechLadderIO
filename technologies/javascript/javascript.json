@@ -104,9 +104,10 @@
             },
             {
                 "name": "Template Literals",
-                "description": "",
+                "description": "This is a must in your learning because it saves you from adding many + when making a string.",
                 "resources": [
-                   	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+		   "https://css-tricks.com/template-literals/"	
                 ]
             },
             {
