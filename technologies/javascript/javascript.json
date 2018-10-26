@@ -69,9 +69,10 @@
             },
             {
                 "name": "The importance of console.log",
-                "description": "",
+                "description": "The console will help you debug your code easier and faster.",
                 "resources": [
-                   	
+                   "https://www.kirupa.com/html5/console.htm",
+		   "https://developer.mozilla.org/en-US/docs/Web/API/console"	
                 ]
             }
         ],
