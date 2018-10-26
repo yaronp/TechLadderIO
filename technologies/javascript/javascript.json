@@ -42,9 +42,11 @@
             },
             {
                 "name": "If/Else statements",
-                "description": "",
+                "description": "This is a good way to test if a condition is true or false and execute code if the conditions are met",
                 "resources": [
-                   
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+		   "https://www.tutorialspoint.com/javascript/javascript_ifelse.htm",
+		   "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals"	
                 ]
             },
             {
