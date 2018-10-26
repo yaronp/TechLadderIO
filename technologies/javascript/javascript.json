@@ -54,7 +54,8 @@
                 "description": "Objects is an amazing thing we can use to set properties for a lot of different things that these articles will touch on",
                 "resources": [
                     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects",
-		            "https://javascript.info/object"	
+		    "https://javascript.info/object",
+		    "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics"	
                 ]
             },
             {
