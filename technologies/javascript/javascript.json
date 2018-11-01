@@ -42,9 +42,11 @@
             },
             {
                 "name": "If/Else statements",
-                "description": "",
+                "description": "This is a good way to test if a condition is true or false and execute code if the conditions are met",
                 "resources": [
-                   
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+		   "https://www.tutorialspoint.com/javascript/javascript_ifelse.htm",
+		   "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals"	
                 ]
             },
             {
@@ -52,65 +54,69 @@
                 "description": "Objects is an amazing thing we can use to set properties for a lot of different things that these articles will touch on",
                 "resources": [
                     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects",
-		            "https://javascript.info/object"	
+		    "https://javascript.info/object",
+		    "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics"	
                 ]
             },
             {
                 "name": "For Loop",
-                "description": "",
+                "description": "For loops are a cool way to iterate a set ammounts of times to do something repeatedly.",
                 "resources": [
-                   	
+                    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+		    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for",
+		    "https://www.tutorialspoint.com/javascript/javascript_for_loop.htm"	
                 ]
             },
             {
                 "name": "The importance of console.log",
-                "description": "",
+                "description": "The console will help you debug your code easier and faster.",
                 "resources": [
-                   	
+                   "https://www.kirupa.com/html5/console.htm",
+		   "https://developer.mozilla.org/en-US/docs/Web/API/console"	
                 ]
             }
         ],
         "advanced_beginner": [
             {
                 "name": "Differences between var, let and const",
-                "description": "",
+                "description": "As our code becomes more complicated is good to have scope on our variables so we don't mutate variables we don't want to be changed and define those we do.",
                 "resources": [
-                   	
-                ]
-            },
-            {
-                "name": "Mutating arrays declared with the const keyword",
-                "description": "",
-                "resources": [
-                   	
+                   "https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e",
+		   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let",
+		   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"	
                 ]
             },
             {
                 "name": "Arrow functions",
-                "description": "",
+                "description": "It's a shorter way to make functions and it's highly used today",
                 "resources": [
-                   	
+		   "https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/",	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"	
                 ]
             },
             {
                 "name": "The spread operator",
-                "description": "",
+                "description": "This is a simple way to iterate through an array and use the key values",
                 "resources": [
-                   	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+		   "https://zendev.com/2018/05/09/understanding-spread-operator-in-javascript.html"	
                 ]
             },
             {
                 "name": "Template Literals",
-                "description": "",
+                "description": "This is a must in your learning because it saves you from adding many + when making a string.",
                 "resources": [
-                   	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+		   "https://css-tricks.com/template-literals/"	
                 ]
             },
             {
                 "name": "Import a default export",
-                "description": "",
+                "description": "In React land this is highly use but it's not something that React provides us. Let's look at this concept that you will use a lot with different technologies.",
                 "resources": [
-                   	
+		   "https://www.kaplankomputing.com/blog/tutorials/javascript/understanding-imports-exports-es6/",	
+                   "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import",
+		   "https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export"	
                 ]
             }
         ],
