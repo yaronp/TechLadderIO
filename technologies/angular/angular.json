@@ -5,26 +5,568 @@
     "levels": {
         "novice": [
             {
-                "name": "Lorem ipsum",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "name": "Angular versioning",
+                "description": "The Angular versioning & release schedule",
                 "resources": [
-                    "https://www.example.com",
-                    "https://www.example.com"
+                    "https://angular.io/guide/releases#angular-versioning",
+                    "https://angular.io/guide/releases#release-schedule"
+                ]
+            },
+            {
+                "name": "Angular CLI",
+                "description": "Angular CLI is a tool to initialize, develop, scaffold & maintain Angular applications",
+                "resources": [
+                    "https://angular.io/guide/quickstart#step-1-install-the-angular-cli",
+                    "https://github.com/angular/angular-cli/wiki#angular-cli"
+                ]
+            },
+            {
+                "name": "Bootstrapping the application",
+                "description": "Learn how to bootstrap the application",
+                "resources": [
+                    "https://angular.io/guide/bootstrapping"
+                ]
+            },
+            {
+                "name": "Components",
+                "description": "Introduction to components, templates, views & syntax",
+                "resources": [
+                    "https://angular.io/guide/architecture-components#introduction-to-components",
+                    "https://angular.io/guide/architecture-components#templates-and-views",
+                    "https://angular.io/guide/architecture-components#template-syntax"
+                ]
+            },
+            {
+                "name": "Component's template in-line",
+                "description": "HTML template of components in-line",
+                "resources": [
+                    "https://angular.io/guide/displaying-data#template-inline-or-template-file",
+                    "https://daveceddia.com/inline-templates-in-angular-quick-tip/"
+                ]
+            },
+            {
+                "name": "Component's style",
+                "description": "Component's style, special selectors, in-line styles",
+                "resources": [
+                    "https://angular.io/guide/component-styles#component-styles",
+                    "https://angular.io/guide/component-styles#special-selectors",
+                    "https://angular.io/guide/component-styles#styles-in-component-metadata"
+                ]
+            },
+            {
+                "name": "Life-cycle hooks",
+                "description": "Learn where components trigger actions at specific points in the lifecycle",
+                "resources": [
+                    "https://angular.io/guide/lifecycle-hooks#lifecycle-hooks"
+                ]
+            },
+            {
+                "name": "Interpolation",
+                "description": "Interpolation in Angular for binding, template expressions & expression/statement context",
+                "resources": [
+                    "https://angular.io/guide/template-syntax#interpolation----",
+                    "https://angular.io/guide/template-syntax#template-expressions",
+                    "https://angular.io/guide/template-syntax#expression-context",
+                    "https://angular.io/guide/template-syntax#statement-context"
+                ]
+            },
+            {
+                "name": "Property binding",
+                "description": "How to bind into properties, targets or use interpolation instead",
+                "resources": [
+                    "https://angular.io/guide/template-syntax#property-binding--property-",
+                    "https://angular.io/guide/template-syntax#binding-target",
+                    "https://angular.io/guide/template-syntax#property-binding-or-interpolation"
+                ]
+            },
+            {
+                "name": "Other bindings",
+                "description": "Attribute binding, class binding, style binding, event binding",
+                "resources": [
+                    "https://angular.io/guide/template-syntax#attribute-binding",
+                    "https://angular.io/guide/template-syntax#class-binding",
+                    "https://angular.io/guide/template-syntax#style-binding",
+                    "https://angular.io/guide/template-syntax#event-binding---event-"
+                ]
+            },
+            {
+                "name": "NgFor",
+                "description": "How to use the built-in NgFor structural directive",
+                "resources": [
+                    "https://angular.io/guide/structural-directives#inside-ngfor"
+                ]
+            },
+            {
+                "name": "NgIf & NgIf-Else",
+                "description": "How to use the built-in NgIf & Else structural directives",
+                "resources": [
+                    "https://angular.io/guide/structural-directives#ngif-case-study",
+                    "https://angular.io/api/common/NgIf#most-common-usage",
+                    "https://angular.io/api/common/NgIf#showing-an-alternative-template-using-else"
+                ]
+            },
+            {
+                "name": "NgSwitch",
+                "description": "How to use the built-in NgSwitch structural directive (NgSwitch, NgSwitchCase & NgSwitchDefault)",
+                "resources": [
+                    "https://angular.io/guide/structural-directives#inside-ngswitch-directives"
+                ]
+            },
+            {
+                "name": "NgStyle",
+                "description": "How to set inline styles dynamically by NgStyle",
+                "resources": [
+                    "https://angular.io/guide/template-syntax#ngstyle"
+                ]
+            },
+            {
+                "name": "Services",
+                "description": "Introduction to services, DI, singleton services & examples",
+                "resources": [
+                    "https://angular.io/guide/architecture-services#introduction-to-services-and-dependency-injection",
+                    "https://angular.io/guide/singleton-services#singleton-services",
+                    "https://angular.io/guide/architecture-services#service-examples"
+                ]
+            },
+            {
+                "name": "HttpClient",
+                "description": "Usage of HttpClient service, reading response, headers & more usages",
+                "resources": [
+                    "https://angular.io/guide/http#httpclient",
+                    "https://angular.io/guide/http#reading-the-full-response",
+                    "https://angular.io/guide/http#requesting-non-json-data",
+                    "https://angular.io/guide/http#advanced-usage"
+                ]
+            },
+            {
+                "name": "Feature Module",
+                "description": "NgModules for the purpose of organizing code",
+                "resources": [
+                    "https://angular.io/guide/feature-modules#feature-modules"
+                ]
+            },
+            {
+                "name": "Browser support",
+                "description": "Supported browsers & polyfills",
+                "resources": [
+                    "https://angular.io/guide/browser-support#browser-support",
+                    "https://angular.io/guide/browser-support#polyfills",
+                    "https://angular.io/guide/browser-support#mandatory-polyfills"
+                ]
+            },
+            {
+                "name": "Typescript configuration",
+                "description": "Overview about TS configuration for Angular projects",
+                "resources": [
+                    "https://angular.io/guide/typescript-configuration#typescript-configuration"
+                ]
+            },
+            {
+                "name": "Deployment",
+                "description": "Deploying your Angular application & optimizing for production",
+                "resources": [
+                    "https://angular.io/guide/deployment#deployment",
+                    "https://angular.io/guide/deployment#optimize-for-production"
                 ]
             }
         ],
-        "advanced_beginner": [],
-        "competent": [],
-        "proficient": [],
-        "expert": []
+        "advanced_beginner": [
+            {
+                "name": "Communication from parent to child",
+                "description": "How to communicate from parent to child via Input",
+                "resources": [
+                    "https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding"
+                ]
+            },
+            {
+                "name": "Intercept Input property changes",
+                "description": "Learn how to intercept Input property changes by Setter & ngOnChanges",
+                "resources": [
+                    "https://angular.io/guide/component-interaction#intercept-input-property-changes-with-a-setter",
+                    "https://angular.io/guide/component-interaction#intercept-input-property-changes-with-ngonchanges"
+                ]
+            },
+            {
+                "name": "Communication from child to parent",
+                "description": "How to communicate from child to parent via Output",
+                "resources": [
+                    "https://angular.io/guide/component-interaction#parent-listens-for-child-event"
+                ]
+            },
+            {
+                "name": "Communication by service",
+                "description": "How to communicate among components by service",
+                "resources": [
+                    "https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service"
+                ]
+            },
+            {
+                "name": "ViewChild & ViewChildren",
+                "description": "Learn more about ViewChild & ViewChildren APIs",
+                "resources": [
+                    "https://angular.io/guide/component-interaction#parent-calls-an-viewchild",
+                    "https://angular.io/api/core/ViewChild",
+                    "https://angular.io/api/core/ViewChildren"
+                ]
+            },
+            {
+                "name": "AfterViewInit & AfterViewChecked",
+                "description": "Learn more about AfterViewInit & AfterViewChecked events APIs",
+                "resources": [
+                    "https://angular.io/guide/lifecycle-hooks#afterview",
+                    "https://angular.io/api/core/AfterViewInit",
+                    "https://angular.io/api/core/AfterViewChecked"
+                ]
+            },
+            {
+                "name": "Directives",
+                "description": "Directive overview, types, respond to events & binding to Input property",
+                "resources": [
+                    "https://angular.io/guide/attribute-directives#directives-overview",
+                    "https://angular.io/guide/attribute-directives#respond-to-user-initiated-events",
+                    "https://angular.io/guide/attribute-directives#binding-to-an-input-property"
+                ]
+            },
+            {
+                "name": "Pipes",
+                "description": "Parameterizing pipes, chaining pipes & custom pipes",
+                "resources": [
+                    "https://angular.io/guide/pipes#parameterizing-a-pipe",
+                    "https://angular.io/guide/pipes#chaining-pipes",
+                    "https://angular.io/guide/pipes#custom-pipes"
+                ]
+            },
+            {
+                "name": "Built-in pipes",
+                "description": "Get to know the built-in Angular pipes",
+                "resources": [
+                    "https://angular.io/guide/pipes#built-in-pipes",
+                    "https://angular.io/api/common/DatePipe",
+                    "https://angular.io/api/common/UpperCasePipe",
+                    "https://angular.io/api/common/LowerCasePipe",
+                    "https://angular.io/api/common/CurrencyPipe",
+                    "https://angular.io/api/common/PercentPipe"
+                ]
+            },
+            {
+                "name": "Pure pipes & Impure pipes",
+                "description": "Learn the differences between pure pipes & impure pipes",
+                "resources": [
+                    "https://angular.io/guide/pipes#pure-pipes",
+                    "https://angular.io/guide/pipes#impure-pipes"
+                ]
+            },
+            {
+                "name": "Routing fundamentals",
+                "description": "Router outlet, router links, active router links & registering routes",
+                "resources": [
+                    "https://angular.io/guide/router#router-outlet",
+                    "https://angular.io/guide/router#router-links",
+                    "https://angular.io/guide/router#active-router-links",
+                    "https://angular.io/guide/router#register-router-and-routes"
+                ]
+            },
+            {
+                "name": "Activated route",
+                "description": "Full view of what the activated route API exposes",
+                "resources": [
+                    "https://angular.io/guide/router#activated-route"
+                ]
+            },
+            {
+                "name": "Hash location strategy",
+                "description": "Hash location strategy vs Path location strategy",
+                "resources": [
+                    "https://angular.io/api/common/HashLocationStrategy",
+                    "https://codecraft.tv/courses/angular/routing/routing-strategies/"
+                ]
+            }
+        ],
+        "competent": [
+            {
+                "name": "Environments",
+                "description": "Set up different named build configurations with different defaults",
+                "resources": [
+                    "https://angular.io/guide/build",
+                    "https://angular.io/guide/build#configure-target-specific-file-replacements"
+                ]
+            },
+            {
+                "name": "AOT Compiler",
+                "description": "The Ahead-of-Time (AOT) compiler",
+                "resources": [
+                    "https://angular.io/guide/aot-compiler#the-ahead-of-time-aot-compiler",
+                    "https://angular.io/guide/aot-compiler#no-arrow-functions"
+                ]
+            },
+            {
+                "name": "Template driven forms",
+                "description": "Introduction, example, data flow & testing template driven forms",
+                "resources": [
+                    "https://angular.io/guide/forms#template-driven-forms",
+                    "https://angular.io/guide/forms-overview#setup-in-template-driven-forms",
+                    "https://angular.io/guide/forms-overview#data-flow-in-template-driven-forms",
+                    "https://angular.io/guide/forms-overview#testing-template-driven-forms"
+                ]
+            },
+            {
+                "name": "Template driven validation",
+                "description": "Form validation in template driven forms",
+                "resources": [
+                    "https://angular.io/guide/form-validation#template-driven-validation",
+                    "http://jasonwatmore.com/post/2018/05/11/angular-6-template-driven-forms-validation-example"
+                ]
+            },
+            {
+                "name": "Reactive vs Template",
+                "description": "Common & differences of reactive & template driven forms",
+                "resources": [
+                    "https://angular.io/guide/forms-overview#common-foundation",
+                    "https://angular.io/guide/forms-overview#key-differences"
+                ]
+            },
+            {
+                "name": "Reactive forms",
+                "description": "Introduction, example, data flow & testing reactive forms",
+                "resources": [
+                    "https://angular.io/guide/reactive-forms",
+                    "https://angular.io/guide/forms-overview#setup-in-reactive-forms",
+                    "https://angular.io/guide/forms-overview#data-flow-in-reactive-forms",
+                    "https://angular.io/guide/forms-overview#testing-reactive-forms"
+                ]
+            },
+            {
+                "name": "Reactive validation",
+                "description": "Form validation in reactive forms",
+                "resources": [
+                    "https://angular.io/guide/form-validation#reactive-form-validation",
+                    "http://jasonwatmore.com/post/2018/05/10/angular-6-reactive-forms-validation-example"
+                ]
+            },
+            {
+                "name": "Modules import order",
+                "description": "Notice the modules import order",
+                "resources": [
+                    "https://angular.io/guide/router#module-import-order-matters"
+                ]
+            },
+            {
+                "name": "Sharing modules",
+                "description": "Organize and reuse shared modules",
+                "resources": [
+                    "https://angular.io/guide/sharing-ngmodules#sharing-modules"
+                ]
+            },
+            {
+                "name": "Routing: Wildcard",
+                "description": "Intercept invalid URLs by adding wildcard routes",
+                "resources": [
+                    "https://angular.io/guide/router#define-a-wildcard-route"
+                ]
+            },
+            {
+                "name": "Routing: Redirects",
+                "description": "Redirect URLs to the default route",
+                "resources": [
+                    "https://angular.io/guide/router#set-up-redirects"
+                ]
+            },
+            {
+                "name": "Routing: Parameters",
+                "description": "Get route params, either using observables or snapshots",
+                "resources": [
+                    "https://angular.io/guide/router#route-parameters",
+                    "https://angular.io/guide/router#activated-route-in-action",
+                    "https://angular.io/guide/router#snapshot-the-no-observable-alternative"
+                ]
+            }
+        ],
+        "proficient": [
+            {
+                "name": "RxJS: Observables",
+                "description": "Learn basics of Observable, subscribing, error handing and practice!",
+                "resources": [
+                    "https://angular.io/guide/observables",
+                    "https://angular.io/guide/observables#subscribing",
+                    "https://angular.io/guide/observables#error-handling",
+                    "https://www.learnrxjs.io/#",
+                    "http://reactivex.io/learnrx/",
+                    "https://rxjs-playground.github.io/#/"
+                ]
+            },
+            {
+                "name": "Async pipes",
+                "description": "Impure async pipes, caching pipe, pure pipes & managing subscriptions",
+                "resources": [
+                    "https://angular.io/guide/pipes#the-impure-asyncpipe",
+                    "https://angular.io/guide/pipes#an-impure-caching-pipe",
+                    "https://angular.io/guide/pipes#pure-pipes-and-pure-functions",
+                    "https://alligator.io/angular/async-pipe/"
+                ]
+            },
+            {
+                "name": "Lazy loading modules",
+                "description": "Learn lazy loading feature modules & routing configuration",
+                "resources": [
+                    "https://angular.io/guide/lazy-loading-ngmodules#lazy-loading-feature-modules",
+                    "https://angular.io/guide/router#lazy-loading-route-configuration"
+                ]
+            },
+            {
+                "name": "Guards",
+                "description": "Learn guards, can-active and securing routes",
+                "resources": [
+                    "https://angular.io/guide/router#guard-the-admin-feature",
+                    "https://angular.io/guide/router#canactivatechild-guarding-child-routes",
+                    "https://codeburst.io/using-angular-route-guard-for-securing-routes-eabf5b86b4d1"
+                ]
+            },
+            {
+                "name": "Testing: Set Up",
+                "description": "Setting up & Continuos Integration",
+                "resources": [
+                    "https://angular.io/guide/testing#setup",
+                    "https://angular.io/guide/testing#enable-code-coverage-reports",
+                    "https://angular.io/guide/testing#configure-project-for-circle-ci",
+                    "https://angular.io/guide/testing#configure-project-for-travis-ci"
+                ]
+            },
+            {
+                "name": "Testing: Implementation",
+                "description": "Testing services, components, attribute, directives, pipes & debugging",
+                "resources": [
+                    "https://angular.io/guide/testing#service-tests",
+                    "https://angular.io/guide/testing#component-test-basics",
+                    "https://angular.io/guide/testing#attribute-directive-testing",
+                    "https://angular.io/guide/testing#pipe-testing",
+                    "https://angular.io/guide/testing#test-debugging"
+                ]
+            },
+            {
+                "name": "Content projection",
+                "description": "Use content projection to reuse flexible components",
+                "resources": [
+                    "https://angular.io/guide/lifecycle-hooks#content-projection",
+                    "https://alligator.io/angular/content-projection-angular/"
+                ]
+            },
+            {
+                "name": "Change detection",
+                "description": "Change detection mechanism, dive deeper, on push detection & ExpressionChangedAfterItHasBeenCheckedError",
+                "resources": [
+                    "https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/",
+                    "https://blog.angularindepth.com/everything-you-need-to-know-about-change-detection-in-angular-8006c51d206f",
+                    "https://netbasal.com/a-comprehensive-guide-to-angular-onpush-change-detection-strategy-5bac493074a4",
+                    "https://blog.angularindepth.com/everything-you-need-to-know-about-the-expressionchangedafterithasbeencheckederror-error-e3fd9ce7dbb4",
+                    "https://blog.angular-university.io/angular-debugging/"
+                ]
+            },
+            {
+                "name": "View encapsulation",
+                "description": "Look at the shadow dom view encapsulation",
+                "resources": [
+                    "https://angular.io/guide/component-styles#view-encapsulation"
+                ]
+            },
+            {
+                "name": "Language service",
+                "description": "See the Angular language service, Installing it & Set it up on your IDE",
+                "resources": [
+                    "https://angular.io/guide/language-service",
+                    "https://angular.io/guide/language-service#installing-in-your-project",
+                    "https://angular.io/guide/language-service#angular-language-service-in-your-editor"
+                ]
+            }
+        ],
+        "expert": [
+            {
+                "name": "Security in Angular",
+                "description": "Security contexts, Sanitization, XSS, Safe values & Http vulnerabilities",
+                "resources": [
+                    "https://angular.io/guide/security",
+                    "https://angular.io/guide/security#sanitization-and-security-contexts",
+                    "https://angular.io/guide/security#xss",
+                    "https://angular.io/guide/security#bypass-security-apis",
+                    "https://angular.io/guide/security#http"
+                ]
+            },
+            {
+                "name": "Internationalization: i18n",
+                "description": "Setting up locales, pipes, template translations, source files, plurals & merging",
+                "resources": [
+                    "https://angular.io/guide/i18n#setting-up-the-locale-of-your-app",
+                    "https://angular.io/guide/i18n#i18n-pipes",
+                    "https://angular.io/guide/i18n#template-translations",
+                    "https://angular.io/guide/i18n#create-a-translation-source-file",
+                    "https://angular.io/guide/i18n#translating-plural-and-select-expressions",
+                    "https://angular.io/guide/i18n#merge-the-completed-translation-file-into-the-app"
+                ]
+            },
+            {
+                "name": "Service workers",
+                "description": "Learn the prerequisites, getting started & tutorial for PWA",
+                "resources": [
+                    "https://angular.io/guide/service-worker-intro#prerequisites",
+                    "https://angular.io/guide/service-worker-getting-started#getting-started-with-service-workers",
+                    "https://blog.angular-university.io/angular-service-worker/"
+                ]
+            },
+            {
+                "name": "Angular Universal: many links",
+                "description": "A complete tutorial per steps of how to prepare your app for Angular Universal",
+                "resources": [
+                    "https://angular.io/guide/universal#step-1-install-dependencies",
+                    "https://angular.io/guide/universal#step-2-prepare-your-app",
+                    "https://angular.io/guide/universal#step-3-create-a-new-build-target-and-build-the-bundle",
+                    "https://angular.io/guide/universal#step-4-set-up-a-server-to-run-universal-bundles",
+                    "https://angular.io/guide/universal#step-5-pack-and-run-the-app-on-the-server",
+                    "https://angular.io/guide/universal#universal-tutorial"
+                ]
+            },
+            {
+                "name": "Dynamic components",
+                "description": "Loading components at runtime & dynamic content projection",
+                "resources": [
+                    "https://angular.io/guide/dynamic-component-loader#dynamic-component-loader",
+                    "https://blog.ng-book.com/dynamic-components-with-content-projection-in-angular/"
+                ]
+            },
+            {
+                "name": "Dynamic forms",
+                "description": "Creating forms dynamically",
+                "resources": [
+                    "https://angular.io/guide/dynamic-form#dynamic-forms",
+                    "https://angular.io/guide/dynamic-form#question-form-components",
+                    "https://angular.io/guide/dynamic-form#dynamic-template"
+                ]
+            },
+            {
+                "name": "Angular animations",
+                "description": "Getting started, simple transition, state, styles & timing",
+                "resources": [
+                    "https://angular.io/guide/animations#getting-started",
+                    "https://angular.io/guide/animations#animating-a-simple-transition",
+                    "https://angular.io/guide/animations#transitions-and-timing"
+                ]
+            },
+            {
+                "name": "Routing with animations",
+                "description": "Add animations to routings",
+                "resources": [
+                    "https://angular.io/guide/router#adding-routable-animations",
+                    "https://coryrylan.com/blog/introduction-to-angular-router-animations"
+                ]
+            }
+        ]
     },
     "notes": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "Please note: This section is about Angular Framework, if you are looking to know more about Typescript check out the Typescript section",
+        "This is a community-driven document, please share your feedback, help us to improve it. Please open an issue or send us a PR on Github!"
     ],
     "contributors": [
         {
-            "name": "Your Name",
-            "contact": "https://example.com/"
+            "name": "Alejandro Lora",
+            "contact": "https://twitter.com/alexpc_"
         }
     ]
 }
