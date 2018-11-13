@@ -512,7 +512,7 @@
                 ]
             },
             {
-                "name": "Angular Universal: many links",
+                "name": "Angular Universal",
                 "description": "A complete tutorial per steps of how to prepare your app for Angular Universal",
                 "resources": [
                     "https://angular.io/guide/universal#step-1-install-dependencies",
