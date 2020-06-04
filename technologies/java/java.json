@@ -11,6 +11,13 @@
                     "https://www.example.com",
                     "https://www.example.com"
                 ]
+            },
+            {
+                "name": "OOP concepts",
+                "description" "basics of Object-Oriented Programming such as inheritance, data binding, polymorphism",
+                "resources": [
+                    "https://www.javatpoint.com/java-oops-concepts"
+                ]
             }
         ],
         "advanced_beginner": [],
